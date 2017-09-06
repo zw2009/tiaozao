@@ -1,0 +1,339 @@
+span,a,i,strong{text-decoration: none;font-size: .40rem;
+color: #000;font-style: normal;}
+p,input{margin: 0;padding: 0;}
+html{font-size: 50px;}
+.clear{clear: both;}
+body{margin: 0;padding:0;background: #e2ede4;}
+ul,li,h2{padding: 0;margin: 0;list-style: none;}
+/*手机分辨率适配*/
+@media only screen and (max-device-width: 320px) {
+	html{
+	font-size:70px;
+        }  
+}
+@media only screen and (min-device-width: 320px)and (max-device-width: 414px){
+	html{
+	font-size:50px;
+        }  
+}
+@media only screen and (min-device-width: 414px) {
+	html{
+	font-size: 50px;
+        }  
+}
+/*以上为公共样式*/
+header{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 1.8rem; 
+	background: url(../img/tips/sc.png) repeat-x;
+	display: flex;
+	z-index: 1;
+	width: 100%;
+}
+.nav_left{
+	margin: .3rem;
+	height: .9rem;
+	background: url(../img/tips/sc_03.png) no-repeat top;
+	margin-top:.9rem ;
+	transform: translateY(-50%);	
+}
+.nav_left i{
+	width: 1rem;
+	display: block;
+}
+.nav_left a{
+	text-align: center;
+	padding-top: .6rem;
+	display: block;
+	color: #fff;
+}
+input{
+	padding-left: .3rem;
+	display: block;
+	height: 1.2rem;
+	width: 100%;
+	margin-top:.9rem ;
+	transform: translateY(-50%);
+	border: 0;
+	border-radius: .1rem;
+	background: url(../img/tips/fdj.png) no-repeat right #fff;
+	font-size: .4rem;
+}
+header img{
+	margin: 0.3rem;
+	display: block;
+	width: 1rem;
+	height: .9rem;
+	margin-top:.9rem ;
+	transform: translateY(-50%);
+}
+/*头部完成*/
+.banner{
+	position: relative;
+}
+.banner img{
+	display: block;
+	margin-bottom: .4rem;
+}
+.round{
+	position: absolute;
+	bottom:.24rem;
+	right:.6rem ;
+	display: flex;
+}
+.round a{
+	display: block;
+	width: .24rem;
+	height: .24rem;
+	border:.04rem solid #fff;
+	box-sizing: border-box;
+	margin: 0 0.12rem;
+	border-radius: 50%;
+}
+.round a:nth-child(1){
+	background: #fff;
+}
+/*banner部分完成*/
+.centent{
+	margin: .2rem;
+	background: #fff;
+	position: relative;
+}
+/*以上是内容区公共样式*/
+.centent ul{
+	padding: .24rem 0;
+	overflow:hidden;
+}
+.centent ul li{
+	float: left;
+	padding: .24rem 0; 
+	width: 25%;
+	text-align: center;
+}
+.centent ul li a {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+.centent ul li a img{
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+.centent ul li a img{
+	display: block;
+	
+}
+.centent ul li span{
+	line-height: .6rem;
+	display: block;
+}
+/*中间药品展示区已完成*/
+.centent h2{
+	height:1.2rem;
+	display: flex;
+	line-height: 1.2rem;
+	padding-left: .28rem;
+	border-bottom: .02rem solid #dadada;
+	box-sizing: border-box;
+}
+.centent h2 i{
+	margin-top:.6rem ;
+	transform: translateY(-50%);
+	width: .12rem;
+	height: .48rem;
+	background: #2a89de;
+	display: block;
+}
+.centent h2 span{
+	padding-left: .52rem;
+	display: block;
+}
+.product{
+	width: 100%;
+	overflow: hidden;
+}
+.product_left{
+	height:6.88rem;
+	text-align: center;
+	float: left;
+	width: 50%;
+	border-right: .02rem solid #dadada;
+	box-sizing: border-box;
+}
+.product_left span{
+	padding: 20px 0;
+	display: block;
+}
+.product_left i{
+	color: red;
+	padding:10px 0;
+	display: block
+}
+.product_left img{
+	padding:16px 0;
+	width:4.8rem;
+	height: 4rem;
+	display: block;
+	margin: 0 auto;
+}
+/*产品左边和头部*/
+.product_right{
+	height:6.88rem;
+	float: right;
+	width: 50%;
+}
+.product_top{
+	height: 50%;
+	border-bottom: .02rem solid #dadada;
+	box-sizing: border-box;
+	overflow: hidden;
+	padding: 0 .3rem;
+}
+.product_top span{
+	padding-top:.48rem;
+	width: 2.6rem;
+	float: left;
+	display: block;
+}
+.product_top span i{
+	padding-top: .4rem;
+	color: red;
+	display: block
+}
+.product_top img{
+	width: 2.8rem;
+	height: 3rem;
+	float: right;
+	display: block;
+}
+/*右边产品上面*/
+.pro_left span{
+	float: right;
+}
+.pro_left img{
+	float: left;
+}
+/*右边产品下面*/
+.centent img{
+	display: block;
+}
+/*以上为小banner图公共样式*/
+.chanpin_right{
+	float: right;
+	border-right: none;
+}
+.chanpin_left{
+	float: left;
+	border-right: .02rem solid #dadada;
+	box-sizing: border-box;
+}
+/*以上为第二个产品完成*/
+.pos_round{
+	position: absolute;
+	left:.4rem;
+	bottom: -.5rem;
+	width: 1.6rem;
+	height: 1.6rem;
+	border:.04rem solid #cccccc;
+	box-sizing: border-box;
+	border-radius: 50%;
+	background: #fff;
+}
+.pos_round a{
+	display: block;
+	width: 1.2rem;
+	height: 1.2rem;
+	border-radius: 50%;
+	margin: 0 auto;
+	background: url(../img/setting/sc_50.png) no-repeat center #2a8ade;
+	margin-top: .8rem;
+	transform: translateY(-50%);
+}
+/*以上是第三种产品完成*/
+footer{
+	margin-top: .8rem;
+}
+.link{
+	padding: 0 .6rem;
+	height: .88rem;
+	line-height: .88rem;
+	background: #e8e8e8;
+	font-size: .5rem;
+	overflow: hidden;
+}
+.link p{
+	color: #c8c8c8;
+	float: left;
+}
+.link p a{
+	color: #2a8ade;
+}
+.link span{
+	color: #2a8ade;
+	float: right;
+	padding-right: .32rem;
+	background: url(../img/setting/sc_54.png) no-repeat right;
+}
+/*以上为登录注册完成*/
+.liank{
+	height: .88rem;
+	line-height: .88rem;
+	background: #1771d2;
+	font-size: .4rem;
+	color: #fff;
+	text-align: center;
+}
+.liank a{
+	padding: 0 .3rem;
+	color: #fff;
+}
+/*以上为版本完成*/
+.linkaa{
+	height: .88rem;
+	line-height: .88rem;
+	background: #2a8ade;
+	font-size: .4rem;
+	text-align: center;
+	color: #fff;
+}
+.linkaa a{
+	color: #fff;
+	text-align: center;
+	padding: 0 .5rem;
+}
+.linkaa a:nth-child(1){
+	background: url(../img/setting/sc_58.png) no-repeat left;
+}
+.linkaa a:nth-child(2){
+	background: url(../img/setting/sc_60.png) no-repeat left;
+}
+.linkaa a:nth-child(3){
+	background: url(../img/setting/sc_62.png) no-repeat left;
+}
+.tell{
+	height: .88rem;
+	line-height: .88rem;
+	background: #1771d2;
+	font-size: .4rem;
+	text-align: center;
+	color: #fff;
+}
+/*手机商城完成*/
+
+
+
+
+
+
+

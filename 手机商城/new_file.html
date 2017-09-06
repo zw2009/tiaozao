@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue-resource.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	
+	<body>
+		<div class="centent" >
+			88888888
+			<ul id="cc">	
+			<li v-for="one in roundList">
+				<a href="#" :style="{background:one.roundBg}">
+					<img :src="one.imageUrl" alt="">
+				</a>
+				<span>{{one.des}}</span>
+			</li>
+			</ul>
+		</div>
+		<script src="js/vuesc.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

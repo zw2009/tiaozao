@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue-resource.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+		<style type="text/css">
+			.Finished{text-decoration: underline;}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<ul>
+			<li v-for="(item,index) in items" class="Finished" @click="setItem(index)">{{item.label}}</li>
+			</ul>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		var app=new Vue({
+			el:"#app",
+			data:{
+				
+				items:[
+					{
+						label:"coding",
+						isFinished:false
+					},
+					{
+						label:"walking",
+						isFinished:true
+					},
+					{
+						label:"halking",
+						isFinished:true
+					}
+					]
+			},
+				methods:{
+					setItem:function(index)	{
+					alert(index)
+				}
+				}
+		})
+		
+		
+		
+		
+		
+		
+		
+		//vue.js的ajax
+//		new	Vue({
+//			created:function(){
+//				this.$http.post('http://192.168.0.106:3900/shop').then(function(response){  //老写法 
+//					alert("nice");
+//				}),function(response){   //新写法用箭头代替function，如果没发起成功就出现这个
+//					alert(555);
+//				}
+//			}
+//		})
+	</script>
+</html>

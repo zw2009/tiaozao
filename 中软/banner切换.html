@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<title>banner切换</title>
+		
+		<style type="text/css">
+			
+			.slideBox {
+			    overflow:hidden;
+			}
+			.slideBox ul {
+			    position:relative;
+			    width:1000px;
+			    height: 200px;
+			    }
+			.slideBox ul li {
+			    float:left;
+			    position:relative;
+			    
+			}
+			.spanBox {
+			    width:300px;
+			    height:20px;
+			    margin: 0 auto;
+			}
+			.spanBox span {
+			    width:40px;
+			    height:40px;
+			    margin-left:5px;
+			    background-color:#fff;
+			    float:left;
+			    line-height:40px;
+			    text-align:center;
+			    font-size:15px;
+			}
+			.slideBox .spanBox .cur {
+			    background:deepskyblue;
+			}
+			.prev {
+			    position:absolute;
+			    left:0px;
+			    top:320px;
+			    float:left;
+			    border-left:solid 1px #000;
+			    opacity:0.5;
+			}
+			/*.next {
+			    width:15px;
+			    height:50px;
+			    position:absolute;
+			    right:0px;
+			    top:320px;
+			    float:right;
+			    border-right:solid 1px rgba(245,237,237,1.00);
+			    opacity:0.5
+			}*/
+		</style>		
+	</head>
+	
+	<body>
+		<div class="slideBox">
+		    <ul>
+		    <li><img src="images/banner/banner2.jpg" width="100%"/></li>
+		    <li><img src="images/banner/banner3.jpg" width="100%"/></li>
+		    <li><img src="images/banner/banner2.jpg" width="100%"/></li>
+		    <li><img src="images/banner/banner3.jpg" width="100%"/></li>
+		    </ul>
+		 		<div class="spanBox">
+				    <span class="cur">q</span>
+				    <span>a</span>
+				    <span>z</span>
+				    <span>w</span>
+		 	  </div>
+		</div>
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+			     var slideBox = $(".slideBox");
+			     var ul = slideBox.find("ul");
+			     var oneWidth = slideBox.find("ul li").eq(0).width();
+			     var number = slideBox.find(".spanBox span");            //注意分号 和逗号的用法
+			     var timer = null;
+			     var sw = 0;                    
+			     //每个span绑定click事件，完成切换颜色和动画，以及读取参数值
+			     number.on("click",function (){
+			    /* $(".slideBox img").css({display:block}).siblings().css({display:none});*/
+			     $(this).addClass("cur").siblings("span").removeClass("cur");
+			     sw=$(this).index();
+			     ul.animate({
+			            "right":oneWidth*sw,    //ul标签的动画为向左移动；
+			               });
+			     });
+			     //左右按钮的控制效果
+			    /* $(".next").stop(true,true).click(function (){
+			         sw++;
+			         if(sw==number.length){sw=0};
+			         number.eq(sw).trigger("click");
+			         });
+			    $(".prev").stop(true,true).click(function (){
+			        sw--;
+			        if(sw==number.length){sw=0};
+			        number.eq(sw).trigger("click");
+			        });*/
+			    //定时器的使用，自动开始
+			    timer = setInterval(function (){
+			        sw++;
+			        if(sw==number.length){sw=0};
+			        number.eq(sw).trigger("click");
+			        },2000);
+			    //hover事件完成悬停和，左右图标的动画效果
+			    slideBox.hover(function(){
+			        $(".next,.prev").animate({
+			            "opacity":1,
+			            },200);
+			        clearInterval(timer);
+			        },function(){
+			            $(".next,.prev").animate({
+			                "opacity":0.5,
+			                },500);
+			        timer = setInterval(function (){
+			        sw++;
+			        if(sw==number.length){sw=0};
+			        number.eq(sw).trigger("click");
+			        },2000);
+			            })
+			    
+			})
+			</script>
+					
+	</body>
+</html>
