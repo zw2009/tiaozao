@@ -1,0 +1,430 @@
+{
+	"index.html": {
+		"resources": [
+			"js/denglu.js",
+			"img/rx.png",
+			"img/st.png",
+			"css/denglu.css",
+			"img/tx.png",
+			"js/md5.js",
+			"css/zhuce.css",
+			"images/zc_13.png",
+			"images/zc_03.png",
+			"images/zc_10.png",
+			"images/zc_06.png",
+			"js/zhuce.js",
+			"img/dg_03.png",
+			"js/zhaohui.js",
+			"css/zhaohui.css",
+			"img/dangpu/dp_03.png",
+			"img/dangpu/dp_11.png",
+			"img/dangpu/dp_07.png",
+			"css/dangpu.css",
+			"img/dangpu/dp_25.png",
+			"img/dangpu/dp_22.png",
+			"img/dangpu/dp_12.png",
+			"img/dangpu/dp_19.png",
+			"img/dangpu/dp_17.png"
+		]
+	},
+	"dangpu.html": {
+		"resources": [
+			"css/com.css",
+			"img/dangpu/dp_03.png",
+			"js/jquery-3.2.1.js",
+			"img/dangpu/dpzt.png",
+			"img/dangpu/dp_12.png",
+			"img/dangpu/dp_11.png",
+			"img/dangpu/dp_07.png",
+			"css/dangpu.css",
+			"denglu.html",
+			"js/dangpu.js",
+			"xiangqing.html",
+			"gerenzhongxin.html",
+			"gouwuche.html",
+			"js/com.js"
+		],
+		"refer": [
+			"denglu.html",
+			"xiangqing.html",
+			"gerenzhongxin.html",
+			"gouwuche.html"
+		]
+	},
+	"xiangqing.html": {
+		"resources": [
+			"css/com.css",
+			"img/dangpu/sx.png",
+			"js/jquery-3.2.1.js",
+			"css/xiangqing.css",
+			"js/xiangqing.js",
+			"gouwuche.html",
+			"dangpu.html",
+			"denglu.html",
+			"querendingdan.html"
+		],
+		"refer": [
+			"gouwuche.html",
+			"dangpu.html",
+			"denglu.html",
+			"querendingdan.html"
+		]
+	},
+	"denglu.html": {
+		"resources": [
+			"css/com.css",
+			"js/denglu.js",
+			"img/rx.png",
+			"img/st.png",
+			"css/denglu.css",
+			"img/tx.png",
+			"js/md5.js",
+			"zhuce.html",
+			"zhaohui.html",
+			"gerenzhongxin.html",
+			"js/com.js"
+		],
+		"refer": [
+			"zhuce.html",
+			"zhaohui.html",
+			"gerenzhongxin.html"
+		]
+	},
+	"zhuce.html": {
+		"resources": [
+			"css/zhuce.css",
+			"images/zc_13.png",
+			"images/zc_03.png",
+			"images/zc_10.png",
+			"images/zc_06.png",
+			"js/zhuce.js",
+			"css/com.css",
+			"js/md5.js",
+			"js/jquery-3.2.1.js",
+			"gerenzhongxin.html",
+			"denglu.html"
+		],
+		"refer": [
+			"gerenzhongxin.html",
+			"denglu.html"
+		]
+	},
+	"zhaohui.html": {
+		"resources": [
+			"img/dg_03.png",
+			"js/zhaohui.js",
+			"css/zhaohui.css",
+			"css/com.css",
+			"js/md5.js"
+		]
+	},
+	"gouwuche.html": {
+		"resources": [
+			"css/com.css",
+			"img/dangpu/dp_03.png",
+			"js/jquery-3.2.1.js",
+			"img/dangpu/dpzt.png",
+			"img/dangpu/dp_12.png",
+			"img/dangpu/dp_11.png",
+			"css/gouwuche.css",
+			"img/dangpu/dp_07.png",
+			"images/bb_03.png",
+			"js/gouwucche.js",
+			"denglu.html",
+			"dangpu.html",
+			"gerenzhongxin.html",
+			"js/com.js",
+			"querendingdan.html"
+		],
+		"refer": [
+			"denglu.html",
+			"dangpu.html",
+			"gerenzhongxin.html",
+			"querendingdan.html"
+		]
+	},
+	"gerenzhongxin.html": {
+		"resources": [
+			"img/gr_02.png",
+			"img/gr_4.png",
+			"img/gr_01.png",
+			"img/gr_1.png",
+			"img/gr_03.png",
+			"img/dangpu/dpzt.png",
+			"img/ge_3.png",
+			"img/ge_2.png",
+			"img/gr_04.png",
+			"css/com.css",
+			"img/gr_05.png",
+			"img/ge_5.png",
+			"js/jquery-3.2.1.js",
+			"css/gerenzhongxin.css",
+			"gr.png",
+			"js/gerenzhongxin.js",
+			"denglu.html",
+			"gerenxinxi.html",
+			"dangpu.html",
+			"gouwuche.html",
+			"js/com.js"
+		],
+		"refer": [
+			"denglu.html",
+			"gerenxinxi.html",
+			"dangpu.html",
+			"gouwuche.html"
+		]
+	},
+	"gerenxinxi.html": {
+		"resources": [
+			"css/com.css",
+			"js/gerenxinxi.js",
+			"css/gerenxinxi.css",
+			"img/gr_06.png",
+			"gerenzhongxin.html",
+			"js/jquery-3.2.1.js",
+			"js/com.js"
+		],
+		"refer": [
+			"gerenzhongxin.html"
+		]
+	},
+	"querendingdan.html": {
+		"resources": [
+			"css/com.css",
+			"img/qrd_03.png",
+			"img/qrd_02.png",
+			"img/qrd_01.png",
+			"js/com.js",
+			"css/querendingdan.css",
+			"js/jquery-3.2.1.js",
+			"js/querendingdan.js",
+			"xiangqing.html",
+			"gouwuche.html"
+		],
+		"refer": [
+			"xiangqing.html",
+			"gouwuche.html"
+		]
+	},
+	"popshop.html": {
+		"resources": [
+			"css/com.css",
+			"img/dangpu/dp_03.png",
+			"js/dangpu.js",
+			"js/com.js",
+			"js/jquery-3.2.1.js",
+			"img/dangpu/dpzt.png",
+			"shopping-cart.html",
+			"css/dangpu.css",
+			"personal-center.html",
+			"product-circe.html"
+		],
+		"refer": [
+			"shopping-cart.html",
+			"personal-center.html",
+			"product-circe.html"
+		]
+	},
+	"shopping-cart.html": {
+		"resources": [
+			"js/gouwucche.js",
+			"css/gouwuche.css",
+			"popshop.html",
+			"iden-orderfrom.html",
+			"img/10134227111913.png",
+			"css/com.css",
+			"personal-center.html",
+			"img/dangpu/dp_03.png",
+			"js/com.js",
+			"js/jquery-3.2.1.js",
+			"img/dangpu/dpzt.png"
+		],
+		"refer": [
+			"popshop.html",
+			"iden-orderfrom.html",
+			"personal-center.html"
+		]
+	},
+	"vue-orderform-list.html": {
+		"resources": [
+			"js/vue-resource.js",
+			"css/dingdanxliebiao.css",
+			"img/qrd_02.png",
+			"dingdanxiangqing/ddxq4.png",
+			"js/vuedingdanliebiao.js",
+			"js/vue.min.js",
+			"images/ddxq1.png",
+			"css/com.css",
+			"js/com.js",
+			"popshop.html",
+			"personal-center.html",
+			"iden-orderfrom.html",
+			"orderfrom-circe.html"
+		],
+		"refer": [
+			"popshop.html",
+			"personal-center.html",
+			"iden-orderfrom.html",
+			"orderfrom-circe.html"
+		]
+	},
+	"personal-center.html": {
+		"resources": [
+			"img/gr_04.png",
+			"img/gr_05.png",
+			"img/gr_02.png",
+			"img/ge_5.png",
+			"img/gr_4.png",
+			"img/gr_01.png",
+			"img/gr_1.png",
+			"img/gr_03.png",
+			"vue-orderform-list.html",
+			"css/gerenzhongxin.css",
+			"js/gerenzhongxin.js",
+			"img/ge_3.png",
+			"img/ge_2.png",
+			"css/com.css",
+			"PIM.html",
+			"img/dangpu/dpzt.png",
+			"shopping-cart.html",
+			"js/com.js",
+			"js/jquery-3.2.1.js",
+			"popshop.html",
+			"login.html"
+		],
+		"refer": [
+			"vue-orderform-list.html",
+			"PIM.html",
+			"shopping-cart.html",
+			"popshop.html",
+			"login.html"
+		]
+	},
+	"iden-orderfrom.html": {
+		"resources": [
+			"img/qrd_01.png",
+			"css/querendingdan.css",
+			"js/querendingdan.js",
+			"vue-orderform-list.html",
+			"css/com.css",
+			"img/qrd_02.png",
+			"shopping-cart.html",
+			"js/com.js",
+			"js/jquery-3.2.1.js",
+			"product-circe.html",
+			"orderfrom-circe.html"
+		],
+		"refer": [
+			"vue-orderform-list.html",
+			"shopping-cart.html",
+			"product-circe.html",
+			"orderfrom-circe.html"
+		]
+	},
+	"PIM.html": {
+		"resources": [
+			"js/gerenxinxi.js",
+			"css/gerenxinxi.css",
+			"img/gr_06.png",
+			"personal-center.html",
+			"css/com.css",
+			"js/com.js",
+			"js/jquery-3.2.1.js"
+		],
+		"refer": [
+			"personal-center.html"
+		]
+	},
+	"product-circe.html": {
+		"resources": [
+			"js/xiangqing.js",
+			"css/xiangqing.css",
+			"iden-orderfrom.html",
+			"popshop.html",
+			"css/com.css",
+			"js/com.js",
+			"personal-center.html",
+			"shopping-cart.html"
+		],
+		"refer": [
+			"iden-orderfrom.html",
+			"popshop.html",
+			"personal-center.html",
+			"shopping-cart.html"
+		]
+	},
+	"orderfrom-list.html": {
+		"resources": [
+			"js/vue-resource.js",
+			"css/dingdanxliebiao.css",
+			"css/com.css",
+			"dingdanxiangqing/ddxq4.png",
+			"js/com.js",
+			"js/jquery-3.2.1.js",
+			"js/vue.min.js",
+			"js/dingdanliebiao.js",
+			"images/ddxq1.png"
+		]
+	},
+	"login.html": {
+		"resources": [
+			"css/com.css",
+			"js/denglu.js",
+			"img/rx.png",
+			"js/com.js",
+			"img/st.png",
+			"css/denglu.css",
+			"img/tx.png",
+			"js/md5.js",
+			"personal-center.html",
+			"register.html",
+			"find-password.html"
+		],
+		"refer": [
+			"personal-center.html",
+			"register.html",
+			"find-password.html"
+		]
+	},
+	"orderfrom-circe.html": {
+		"resources": [
+			"js/vue-resource.js",
+			"img/ct1.png",
+			"img/icon.png",
+			"css/dingdanxiangqing.css",
+			"css/comasd.css",
+			"js/dingdanxiangxi.js",
+			"js/vue.min.js",
+			"img/images/tips_06.png",
+			"vue-orderform-list.html",
+			"img/images/tips_03.png",
+			"iden-orderfrom.html"
+		],
+		"refer": [
+			"vue-orderform-list.html",
+			"iden-orderfrom.html"
+		]
+	},
+	"register.html": {
+		"resources": [
+			"css/zhuce.css",
+			"images/zc_13.png",
+			"images/zc_03.png",
+			"images/zc_10.png",
+			"images/zc_06.png",
+			"js/zhuce.js",
+			"login.html"
+		],
+		"refer": [
+			"login.html"
+		]
+	},
+	"find-password.html": {
+		"resources": [
+			"img/dg_03.png",
+			"css/com.css",
+			"js/zhaohui.js",
+			"css/zhaohui.css"
+		]
+	}
+}

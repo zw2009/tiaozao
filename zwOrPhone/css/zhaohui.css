@@ -1,0 +1,85 @@
+body{
+	
+}
+header{
+	height: .9rem;
+	line-height:.9rem;
+	background: #33ccff;
+	text-align: center;
+	color: #fff;
+	font-size: .32rem;
+	position: relative;
+}
+header a{
+	position: absolute;
+	left: .2rem;
+	top: 50%;
+	height: .3rem;
+	width: .3rem;
+	border-left:2px solid #fff;
+	border-bottom:2px solid #fff; 
+	box-sizing:border-box;
+	transform:translateY(-50%) scaleY(.8) rotate(45deg);
+	cursor: pointer;
+}
+
+.input_all{
+	margin-top:.4rem;
+}
+.input_all ul{
+	
+}
+.input_all ul li{
+	margin: .2rem .6rem;
+	display: flex;
+}
+
+.input_all ul li input{
+	-webkit-appearance: none;
+	padding-left: .6rem;
+	outline: none;
+	border: .04rem solid #e8e8ea;
+	color: #000;
+	border-radius: .3rem;
+	width: 100%;
+	height:.8rem;
+	display: block;
+	box-sizing: border-box;
+	font-size:.25rem ;
+}
+.authCode{
+	width:3.6rem;
+}
+.authCode p{
+	color: #fff;
+	margin-left:.2rem;
+	border-radius: .32rem;
+	height: .8rem;
+	background: #fa6c62;
+	line-height:.8rem;
+	text-align: center;
+	font-size: .24rem;
+	
+}
+.authCode img{
+	padding-left:.1rem;
+	border-radius: .32rem;
+	height: .8rem;
+	width: 100%;
+}
+.input_all li input.buttom{
+	margin-top: 1rem;
+	color: #fff;
+	border: none;
+	background:#33ccff;
+	font-size:.3rem ;
+	padding: 0;
+	-webkit-appearance: none;
+}
+
+
+
+
+
+
+

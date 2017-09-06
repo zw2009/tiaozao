@@ -1,0 +1,150 @@
+body{
+	height: 200px;
+}
+.top_nav{
+	display: block;
+	height:.9rem;
+	line-height:.9rem;
+	background: #33ccff;
+	text-align: center;
+	color: #fff;
+	font-size: .32rem;
+}
+.top_nav a{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: .3rem;
+    height: .3rem;
+    border-left: .04rem solid #fff;
+    border-bottom:.04rem solid #fff;
+    margin: .3rem;
+    transform: scaleY(.8) rotate(45deg);
+    box-sizing: border-box;
+}
+.code{
+	height: .8rem;
+	display: flex;
+	line-height: .8rem;
+}
+.code span{
+	background: #fff;
+	display: block;
+	text-align: center;
+	width: 50%;
+	font-size:.3rem;
+	color: #000;
+}
+.phoReg{
+	border-bottom:.04rem solid #33CCFF;
+}
+.input_all{
+	margin-top:.4rem;
+	
+	}
+.input_all ul{
+	
+}
+.round{
+	margin: 0 .4rem;
+	border:.01rem solid #c9c9c9;
+	border-radius: .05rem;
+}
+
+.input_all li{
+	position: relative;
+	display: flex;
+	width: 100%;
+}
+.input_all li img{
+	height: .5rem;
+	width:1.3rem;
+	position: absolute;
+	right:15px;
+	top:50%;
+	transform: translateY(-50%);
+	display: block;
+}
+.input_all li input{
+	display: block;
+	padding-left: .8rem;
+	border:.01rem solid #c9c9c9;
+	border-bottom: 0;
+	outline: none;
+	width: 100%;
+	height:1.1rem;
+	box-sizing: border-box;
+	font-size: .28rem;
+}
+.input_all li input.phone{
+	border-radius:..5rem;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	background: url(../images/zc_03.png) no-repeat left #fff; 
+	background-position: 0.2rem .30rem;
+    background-size: 25px 25px;
+}
+.input_all li input.email{
+	border-radius:.05rem;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	background: url(../images/zc_03.png) no-repeat left #fff; 
+	background-position: 0.2rem .30rem;
+    background-size: 25px 25px;
+}
+.input_all li input.password{
+	border-left: 0;
+	border-right: 0;
+	background: url(../images/zc_06.png) no-repeat left #fff; 
+	background-position: 0.2rem .30rem;
+    background-size: 25px 25px;
+}
+.input_all li input.lastinput{
+	
+	background: url(../images/zc_13.png) no-repeat left #fff; 
+	background-position: 0.15rem .30rem;
+    background-size: 30px 30px;
+	border: 0;
+	border-radius:.1rem;
+	
+}
+.input_all ul li:nth-child(4) {
+	border-top:.02rem solid #c9c9c9 ;
+	box-sizing: border-box;
+	
+	
+}
+.register{
+	margin: .4rem .4rem;
+	height: .8rem;
+	line-height:.8rem;
+	text-align: center;
+	background: #33CCFF;
+	width:100%;
+	color: #fff;
+	font-size: .36rem;
+	margin-bottom: .8rem;
+	border-radius:.1rem;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

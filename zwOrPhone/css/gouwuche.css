@@ -1,0 +1,285 @@
+em{
+	font-style: normal;
+}
+/*头部*/
+header{
+	padding: 0 .2rem;
+	display: flex;
+	background: #33CCFF;
+	height: .9rem;
+	line-height: .9rem;
+	color: #fff;
+	overflow: hidden;
+	position: relative;
+	font-size: .32rem;
+}
+.top_all{
+	font-size: .28rem;
+	position: absolute;
+	left: .2rem;
+	cursor: pointer;
+}
+.shop{
+	flex: 1;
+	font-size: .32rem;
+	float: left;
+	text-align: center;
+}
+.top_img{
+	position: absolute;
+	right: .2rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.top_img img{
+	display: block;
+	width: .5rem;
+	height: .5rem;
+}
+/*产品*/
+.porduct{
+	margin-bottom: 2rem;
+}
+.porduct ul{
+}
+.porduct ul li{
+	padding: 0 .1rem 0 .60rem;
+	position: relative;
+}
+
+.round{
+	height: .4rem;
+	width: .4rem;
+	border: 1px solid #33CCFF;
+	border-radius: 50%;
+	position: absolute;
+	left: .1rem;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	box-sizing: border-box;
+}
+.content_one .cur{
+	border: 0;
+	background:url(../img/10134227111913.png) no-repeat center;
+}
+.porduct ul li img{
+	width: 2rem;
+    height:2rem;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/*隐藏的DIV删除数量*/
+#num_dis{
+	margin-left: 2.2rem;
+    height: 2.2rem;
+    border-bottom: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    
+}
+#num_dis div{
+	margin-top: .3rem;
+	font-size: .2rem;
+	display: block;
+	float: left;
+	width: .6rem;
+	height: .6rem;
+	line-height: .6rem;
+	border: 1px solid #BFBFBF;
+	text-align: center;
+}
+#num_dis div:nth-child(1){
+	border-right: 0;
+}
+#num_dis div:nth-child(2){
+	border-right: 0;
+}
+#num_dis div:nth-child(4){
+	margin:0;
+	float: right;
+	width: 1rem;
+	height: 1.8rem;
+	line-height:1.8rem;
+	box-sizing: border-box;
+	border-color: red;
+	background:red;
+	color: #fff;
+	margin-top: .2rem;
+}
+
+.pro_cont{
+	
+	margin-left:2.09rem;
+	border-bottom: 1px solid #e5e5e5;
+	box-sizing: border-box ;
+	height: 2.2rem;
+}
+.pro_cont p{
+	line-height:.35rem;
+	display: flex;
+	padding: .05rem 0 0 0;
+}
+.pro_cont p:nth-child(1){
+	font-size: .28rem;
+	overflow : hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+}
+.pro_cont p:nth-child(2){
+	font-size: .24rem;
+	padding: .1rem 0;
+}
+.pro_cont p:nth-child(2) i{
+	font-size: .24rem;
+}
+.pro_cont p:nth-child(3){
+	
+	text-align: center;
+	font-size: .2rem;
+	background: #33cc33;
+	width: 1rem;
+	height: .3rem;
+	line-height: .3rem;
+	 display: block;
+	 color: #fff;
+}
+.pro_cont p:nth-child(4){
+	padding: .1rem 0;
+	color: #ff9900;
+	font-size: .2rem;
+}
+.pro_cont p:nth-child(4) strong{
+	color: #ff9900;
+	font-size: .35rem;font-weight: normal;
+}
+.pro_cont p:nth-child(4) i{
+	padding-left: .2rem;
+	color: #999999;
+	font-size: .2rem;
+	flex: 1;
+}
+.pro_cont p:nth-child(4) em{
+	font-size: .28rem;
+	color: #333333;
+	font-style: normal;
+}
+
+.delt{
+	cursor: pointer;
+}
+
+footer{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+/*下面第一个列表*/
+.balance{
+	background: #fff;
+	display: flex;
+	height: .8rem;
+	line-height: .8rem;
+	border-top:1px solid #BFBFBF ;
+	font-size:.3rem ;
+}
+.cleck{
+	padding-left: .6rem;
+	position: relative;
+}
+.cleck .round{
+	position: absolute;
+	left: .1rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.cleck .cur{
+	border: 0;
+	background:url(../img/10134227111913.png) no-repeat center;
+}
+
+.freig{
+	padding-top: .13rem;
+	padding-right: .2rem;
+	flex: 1;
+	font-size: .25rem;
+	text-align: right;
+	line-height: .28rem;
+}
+.freig p{
+	
+}
+.total{
+	background: #ee8219;
+	width: 1.7rem;
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+}
+
+
+/*下面的第二个列表*/
+.bott_list{
+	height: 1rem;
+	border-top:1px solid #BFBFBF ;
+}
+.listCode{
+	background: #fff;
+	display: flex;
+
+}
+.listCode li{
+	width: 25%;
+	float: left;
+	text-align: center;
+}
+.listCode li i{
+	padding-top: 5px;
+	width: 28px;
+	height: 28px;
+	display: block;
+	margin: 0 auto;
+	background:url(../img/dangpu/dpzt.png) no-repeat center;
+	background-size: 100px 200px;
+}
+.listCode li:nth-child(1) i{
+	
+}
+.listCode li:nth-child(2) i{
+	background-position: -15px -65px;
+}
+.listCode li:nth-child(3) i{
+	background-position: -15px -105px;
+}
+.listCode li:nth-child(4) i{
+	background-position: -15px -144px;
+}
+
+.listCode li:nth-child(4) i img{
+	width: 26px;
+	height: 26px;
+}
+.listCode li span{
+	font-size: .2rem;
+	display: block;
+	line-height: .5rem;
+}
+.listCode li span a{
+	font-size: .2rem;
+	display: block;
+	padding-top:5px;
+}
+.listCode .cur{
+	background-position-x: -65px!important;
+}
+
+
+
+
+
+
+

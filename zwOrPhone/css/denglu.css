@@ -1,0 +1,95 @@
+
+.round{
+	padding: 1rem 0rem;
+	background:#33ccff ;
+	margin: 0 auto;
+}
+.round a{
+	display: block;
+	width: 1.9rem;
+	height:1.9rem;
+	border:.02rem solid #fff;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+.round a img{
+	width:1.9rem;
+	height:1.9rem;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+.inputOut{
+	margin:.4rem .4rem 0;
+}
+.inputOut input{
+	outline:medium;
+	border-top:0 ;
+	border-right:0 ;
+	border-left:0 ;
+	border-bottom:.01rem solid #12a2e5;
+	display: block;
+	height:1rem;
+	width:100%;
+	border-color: #12a2e5;
+	font-size:.28rem;
+	box-sizing: border-box;
+	padding-left:.6rem;
+}
+.inputOut input::placeholder{
+	color: #bfbfbf;	
+}
+.ip_tt{
+	background:url(../img/rx.png) no-repeat left #fff;
+	background-size: 20px 25px;
+}
+.ip_tx{
+	background:url(../img/st.png) no-repeat left #fff;
+	background-size: 20px 25px;
+}
+.buttom{
+	text-align: center;
+	line-height:.8rem;
+	margin:.8rem .4rem 0;
+}
+
+.button{
+	-webkit-appearance: none;	
+	outline: none;
+	height: .84rem;
+	background: #fff;
+	border-color:#33ccff ;
+	font-size:.32rem;
+	color: #33ccff;
+	border-radius:.05rem;
+	box-sizing: border-box;
+	border:.01rem solid #33ccff;
+	width: 100%;
+}
+footer{
+	overflow: hidden;
+	margin:1.8rem .4rem 0.15rem;
+}
+.code a{
+	padding-top: .2rem;
+	font-size: .24rem;
+	color: #33ccff;
+	height: .3rem;
+	float: left;
+	line-height: .3rem;
+	border-bottom:.01rem solid #33ccff;
+}
+.sign a{
+	font-size: .28rem;
+	color: #33ccff;
+	display: block;
+	text-align: center;
+	line-height: .6rem;
+	height:.6rem;
+	float: right;
+	padding:0rem .3rem;
+	border:.01rem solid #33ccff;
+	border-radius:.1rem;
+}
+
+
+
