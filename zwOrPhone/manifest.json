@@ -490,7 +490,8 @@
 					"js/com.js",
 					"js/jquery-3.2.1.js",
 					"popshop.html",
-					"login.html"
+					"login.html",
+					"img/gr_06.png"
 				],
 				"refer": [],
 				"priority": 0
@@ -583,7 +584,8 @@
 					"img/images/tips_06.png",
 					"vue-orderform-list.html",
 					"img/images/tips_03.png",
-					"iden-orderfrom.html"
+					"iden-orderfrom.html",
+					"images/zfcg.png"
 				],
 				"refer": [],
 				"priority": 0

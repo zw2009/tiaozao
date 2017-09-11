@@ -40,6 +40,7 @@ function setName(result){
 }
 //加入购物车点击获取接口
 	$(document).on("click",".addShop",function(){
+		if(localStorage.getItem("token")){
 		$.ajax({
 			type:"post",
 			url:Window.preurl+"/addShopCar",
@@ -47,21 +48,14 @@ function setName(result){
 			contentType:"application/json",
 			data:JSON.stringify({id:getQueryString("id"),token:localStorage.getItem("token")}),
 			success:function(result){
-				location.href="shopping-cart.html";
+					location.href="shopping-cart.html";	
 			}
-		})
-		
-		
-		if(localStorage.getItem("token")){
-		location.href="shopping-cart.html";	
-	}
-	else{
-		alert("请您登陆！")
-		location.href="login.html";
-	}
-	});
-
-
+		})	
+		}else{
+			alert("请您登陆！")
+			location.href="login.html";
+		}
+})
 
 
 //点击下面的菜单栏
@@ -74,7 +68,13 @@ function setName(result){
 
 //点击立即购买
 $(document).on("click",".buy",function(){
-	location.href="iden-orderfrom.html";
+	if(localStorage.getItem("token")){
+		location.href="iden-orderfrom.html";
+	}else{
+		alert("请您登陆！");
+		location.href="login.html";
+	}
+	
 })
 
 $(document).on("click",".phone",function(){

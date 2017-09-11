@@ -33,8 +33,9 @@ header span{
 
 /*个人图片*/
 .imImg{
-	padding-top: 40px;
+	padding-top: 30px;
 	background: url(../img/gr_4.png) repeat-x;
+	padding-bottom: 30px;
 }
 .imImg img{
 	display: block;
@@ -44,6 +45,7 @@ header span{
 	border-radius: 50%;
 	box-sizing: border-box;
 	margin: 0 auto;
+	background: #fff;
 }
 .imImg span{
 	display: block;

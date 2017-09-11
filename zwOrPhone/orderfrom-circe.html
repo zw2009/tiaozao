@@ -16,7 +16,7 @@
 			<p>订单详情</p>
 		</header>
 		<div class="goods">
-			<p>交易成功</p>
+			<p><img src="images/zfcg.png" width="100%"/></p>
 		</div>
 		<div class="news">
 			<img src="img/icon.png"/>
@@ -39,24 +39,16 @@
 			</div>
 		</div>-->
 	</pro>
-	<div class="over">
-		<div class="costomer">
-			<div class="posTomer">
-			<p>在线咨询</p>
-			<p>申请售后</p>
-			</div>
-		</div>
-	</div>
 	<div class="computer">
 		<div class="price"><p>商品总数</p><span v-if="hide">{{content.totalNum}}个</span> </div>
 		<div class="price"><p>运费</p><span v-if="hide">{{content.state}}</span> </div>
-		<div class="price fontPic" @click="black"><p>订单总价</p><span v-if="hide">￥{{content.totalCost}}</span> </div>
+		<div class="price fontPic" @click="black"><p>订单总价</p><span v-if="hide">{{content.totalCost}}</span> </div>
 		
 	</div>
 	
 	<div class="computer">
 		
-		<div class="price fontPic monet" v-show="haha"><p>实付款</p><span v-if="hide">￥{{content.totalCost}}</span> </div>
+		<div class="price fontPic monet" v-show="haha"><p>实付款</p><span v-if="hide">{{content.totalCost}}</span> </div>
 	</div>
 	<div class="see">
 		<p>查看花呗账单<i></i></p>

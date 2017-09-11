@@ -33,6 +33,9 @@ header p{
 	color: red;
 	font-size: 0.42rem;
 }
+.goods p img{
+	widows: 100%;
+}
 .news{
 	position: relative;
 	background: #fff;
@@ -126,9 +129,8 @@ body{
 	display: flex;
 }
 .contentText p{
-	padding-right: .2rem;
 	padding-top: .2rem;
-	padding-left: 2.3rem;
+	padding-left: 2.2rem;
 	flex: 1;
 	font-size: .26rem;
 }
