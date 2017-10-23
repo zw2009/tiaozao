@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]><html class="ie ie6 lt8 lt9"><![endif]-->
+<!--[if IE 7]><html class="ie ie7 lt8 lt9"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 lt9"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<!--[if (gt IE 9) | !(IE)]><!--><html><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>title</title>
+<script>
+if(/*@cc_on!@*/false && document.documentMode === 10) document.documentElement.className+=' ie10';
+</script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/common.css">
+<script src="javascript/jquery-1.9.1.min.js"></script>
+<script src="javascript/common.js"></script>
+<!--banner-->
+<script type="text/javascript" src="javascript/slides.min.jquery.js"></script>
+<script type="text/javascript">
+	$(function(){		
+		$('#slides').slides({
+			preload: true,
+			play: 5000,
+			pause: 2500,
+			slideSpeed:700,
+			animationStart: function(){
+				$('.caption').animate({
+					bottom:-35
+				},100);
+			},
+			animationComplete: function(current){
+				$('.caption').animate({
+					bottom:0
+				},200);
+				if (window.console && console.log) {
+					// example return of current slide number
+					console.log(current);
+				};
+			}
+		});
+	});
+	
+</script>
+<style>
+#container {width:977px;height:436px; margin-top:0px;}
+#example { width:977px%; height:436px; }
+#slides{width:977px; height:436px; margin-left:-488px;}
+.slides_container img{width:977px; height:436px;}
+#slides .prev {top:183px; left:0px; width:52px; height:89px;}
+#slides .next {top:183px;  right:0px; width:52px; height:89px;}
+</style>
+<!--banner-->
+<!--[if lt IE 9]>
+<script src="javascript/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<!--头部-->
+<div class="header cf">
+	<a href="#" class="logo"><img src="images/logo.png"/></a>
+    <div class="head_right">
+    	<ul class="cf">
+        	<li style="background:url(images/t1.png) no-repeat left"><a href="#"><h3>悠蓝妈妈关爱热线</h3><span>400-8801897</span></a></li>
+            <li style="background:url(images/t3.png) no-repeat left"><a href="#"><h3>悠蓝官方旗舰店</h3><span>&nbsp;</span></a></li>
+            <li style="background:url(images/t2.png) no-repeat left"><a href="#"><h3><br/>荷兰Neolac 官网</h3></a></li>
+        </ul>
+    </div>
+</div>
+<!--头部-->
+<!--导航-->
+<div class="nav">
+	<ul>
+    	<li><a href="#">&nbsp;&nbsp;首&nbsp;&nbsp;页</a></li>
+        <li><a href="#">了解悠蓝</a></li>
+        <li><a href="#">有机认证</a></li>
+        <li><a href="#">真伪查询</a></li>
+        <li class="open">
+        	<a href="#">悠蓝妈妈</a>
+        	<div class="nav_u">
+            	<div class="nav_u_zon">
+                	<a href="#">尊享服务</a>
+                    <span><img src="images/nav_span.png"/></span>
+                    <a href="#">活动及问答</a>
+                </div>
+                <div class="nav_u_bottom"></div>
+            </div>
+        </li>
+        <li><a href="#">积分商城</a></li>        
+    </ul>
+</div>
+<!--导航-->
+<!--轮播画面-->
+<div class="lub">
+	<!--图片轮播-->
+    <div class="tplb">
+    	<div id="container">
+            <div id="example">
+                <div id="slides">
+                    <div class="slides_container">
+                        <div> <img src="images/l1.png" alt=""> </div>
+                        <div> <img src="images/l2.png" alt=""> </div>                
+                    </div>
+                     <a class="prev"><img src="images/banner_next1.png"></a>
+                     <a class="next"><img src="images/banner_prve1.png" ></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--图片轮播-->
+    <div class="fg1_2"></div>
+    
+</div>
+<!--轮播画面-->
+<!--资讯中心-->
+<div class="zxzx1">
+    <h2><a href="#">资讯中心</a></h2>
+    <h3><a href="#">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a></h3>
+    <i>年/月/日</i>
+</div>
+<!--资讯中心-->
+<!--功能-->
+<div class="dnjs">
+	<a href="#" class="w1">微信登录</a>
+    <a href="#" class="w2">发帖</a>
+    <span class="cf">
+    	<input name="" type="text" class="wb" value="请输入关键词"><input name="" type="button" class="an" value="搜索">
+    </span>
+</div>
+<!--功能-->
+<!--回帖列表-->
+<ul class="hyrhlb cf">
+	<li class="cf">
+    	<img class="tx" src="images/wxtx.jpg"/>
+        <div class="ht1">
+        	<a href="#" class="jz">主题标题主题标题主题标题主题标题主题标题主题标题主题标题</a>
+            <i>年/月/日</i><i>时：分：秒</i><i>微信昵称</i>
+        </div>
+        <div class="ht2">
+        	最后由”微信昵称“在年/月/日时：分：秒   <a href="#">回复</a>
+        </div>
+        <a href="#" class="dz">赞</a>
+    </li>
+    <li class="cf">
+    	<img class="tx" src="images/wxtx.jpg"/>
+        <div class="ht1">
+        	<a href="#" class="jz">主题标题主题标题主题标题主题标题主题标题主题标题主题标题</a>
+            <i>年/月/日</i><i>时：分：秒</i><i>微信昵称</i>
+        </div>
+        <div class="ht2">
+        	最后由”微信昵称“在年/月/日时：分：秒   <a href="#">回复</a>
+        </div>
+        <a href="#" class="dz">赞</a>
+    </li>
+    <li class="cf">
+    	<img class="tx" src="images/wxtx.jpg"/>
+        <div class="ht1">
+        	<a href="#" class="jz">主题标题主题标题主题标题主题标题主题标题主题标题主题标题</a>
+            <i>年/月/日</i><i>时：分：秒</i><i>微信昵称</i>
+        </div>
+        <div class="ht2">
+        	最后由”微信昵称“在年/月/日时：分：秒   <a href="#">回复</a>
+        </div>
+        <a href="#" class="dz">赞</a>
+    </li>
+    <li class="cf">
+    	<img class="tx" src="images/wxtx.jpg"/>
+        <div class="ht1">
+        	<a href="#" class="jz">主题标题主题标题主题标题主题标题主题标题主题标题主题标题</a>
+            <i>年/月/日</i><i>时：分：秒</i><i>微信昵称</i>
+        </div>
+        <div class="ht2">
+        	最后由”微信昵称“在年/月/日时：分：秒   <a href="#">回复</a>
+        </div>
+        <a href="#" class="dz">赞</a>
+    </li>
+    <li class="cf">
+    	<img class="tx" src="images/wxtx.jpg"/>
+        <div class="ht1">
+        	<a href="#" class="jz">主题标题主题标题主题标题主题标题主题标题主题标题主题标题</a>
+            <i>年/月/日</i><i>时：分：秒</i><i>微信昵称</i>
+        </div>
+        <div class="ht2">
+        	最后由”微信昵称“在年/月/日时：分：秒   <a href="#">回复</a>
+        </div>
+        <a href="#" class="dz">赞</a>
+    </li>
+    <li class="cf">
+    	<img class="tx" src="images/wxtx.jpg"/>
+        <div class="ht1">
+        	<a href="#" class="jz">主题标题主题标题主题标题主题标题主题标题主题标题主题标题</a>
+            <i>年/月/日</i><i>时：分：秒</i><i>微信昵称</i>
+        </div>
+        <div class="ht2">
+        	最后由”微信昵称“在年/月/日时：分：秒   <a href="#">回复</a>
+        </div>
+        <a href="#" class="dz">赞</a>
+    </li>
+    <li class="cf">
+    	<img class="tx" src="images/wxtx.jpg"/>
+        <div class="ht1">
+        	<a href="#" class="jz">主题标题主题标题主题标题主题标题主题标题主题标题主题标题</a>
+            <i>年/月/日</i><i>时：分：秒</i><i>微信昵称</i>
+        </div>
+        <div class="ht2">
+        	最后由”微信昵称“在年/月/日时：分：秒   <a href="#">回复</a>
+        </div>
+        <a href="#" class="dz">赞</a>
+    </li>
+    <li class="cf">
+    	<img class="tx" src="images/wxtx.jpg"/>
+        <div class="ht1">
+        	<a href="#" class="jz">主题标题主题标题主题标题主题标题主题标题主题标题主题标题</a>
+            <i>年/月/日</i><i>时：分：秒</i><i>微信昵称</i>
+        </div>
+        <div class="ht2">
+        	最后由”微信昵称“在年/月/日时：分：秒   <a href="#">回复</a>
+        </div>
+        <a href="#" class="dz">赞</a>
+    </li>
+    <li class="cf">
+    	<img class="tx" src="images/wxtx.jpg"/>
+        <div class="ht1">
+        	<a href="#" class="jz">主题标题主题标题主题标题主题标题主题标题主题标题主题标题</a>
+            <i>年/月/日</i><i>时：分：秒</i><i>微信昵称</i>
+        </div>
+        <div class="ht2">
+        	最后由”微信昵称“在年/月/日时：分：秒   <a href="#">回复</a>
+        </div>
+        <a href="#" class="dz">赞</a>
+    </li>
+</ul>
+<!--分页-->
+    <div class="feny">
+    	<a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">...</a>
+    </div>
+    <!--分页-->
+<!--回帖列表-->
+<div class="footer">
+	<span style="font-size:17px;"><a href="#">联系我们</a><i>|</i>客服热线：400-8801897</span>
+    <span>悠蓝温馨提示您，母乳是宝宝最理想的食品，悠蓝支持母乳喂养</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]><html class="ie ie6 lt8 lt9"><![endif]-->
+<!--[if IE 7]><html class="ie ie7 lt8 lt9"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 lt9"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<!--[if (gt IE 9) | !(IE)]><!--><html><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>title</title>
+<script>
+if(/*@cc_on!@*/false && document.documentMode === 10) document.documentElement.className+=' ie10';
+</script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/common.css">
+<script src="javascript/jquery-1.9.1.min.js"></script>
+<script src="javascript/common.js"></script>
+<!--banner-->
+<script src="javascript/jquery.bxslider.min.js"></script>
+<link href="css/jquery.bxslider.css" rel="stylesheet" />
+<script>
+$(function(){
+	$('.bxslider').bxSlider({
+		auto: true,
+  		autoControls: true
+	});
+})
+</script>
+<!--banner-->
+<!--地图-->
+<script type="text/javascript" src="javascript/event.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=	4646d42a92c139b1868b26f89a22313c"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+<!--地图-->
+<!--[if lt IE 9]>
+<script src="javascript/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="hed">
+	<a href="#" class="left"><img src="images/t1.png"/></a>
+    <h3>联系我们</h3>
+    <a href="#" class="right"><img src="images/t2.png"/></a>
+</div>
+<div class="neiy">
+<div class="main xlwm">    
+    <h3>湖南伊仕环保有限公司</h3>    
+<p>地址：湖南省长沙市雨花区环保科技园国际企业中心11栋<br/>
+电话：0731-89775666 / 88902866 / 88610766 / 84587768<br/>
+传真：0731-84587633<br/>        邮箱：2857066791@qq.com<br/>
+QQ：2851066791 / 2851066794<br/>
+运营部：李工（13974831131）<br/>  技术支持部：张工（18108400785）<br/>
+售后服务部：倪工（18108400787） <br/>
+技术服务邮箱：3851066794@qq.com	       </p>
+<h3>贵州技术中心</h3>
+<p>地址：贵州省贵阳市南明区花溪大道北段100号<br/>
+联系人：尹工（18684866851）<br/>
+电话：0851-85950988      <br/>QQ：2851066793</p>
+    <!--联系我们-->
+    <br/>
+    <div class="xlewn_two">
+        <div id="allmap"></div>
+    </div>
+    <!--联系我们-->      
+    
+</div>
+</div>
+<div class="foot cf">
+	<a href="#"><img src="images/f1.png"/><span>产品中心</span></a>
+    <a href="#"><img src="images/f2.png"/><span>关于我们</span></a>
+    <a href="#"><img src="images/f3.png"/><span>联系我们</span></a>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+var map = new BMap.Map("allmap",{minZoom:11,maxZoom:30});// 创建Map实例的同时设置地图缩放级别的范围
+map.centerAndZoom(new BMap.Point(113.03197,28.086175), 19);//初始化时，即可设置中心点和地图缩放级别
+map.enableScrollWheelZoom(true);//允许鼠标滑轮控制地图的缩放
+map.addControl(new BMap.OverviewMapControl());//添加默认缩略地图控件
+map.addControl(new BMap.NavigationControl());//添加默认缩放平移控件
+map.addControl(new BMap.ScaleControl({anchor: BMAP_ANCHOR_BOTTOM_RIGHT}));// 比例尺控件，左下
+function addMarker(point)//动画标注创建函数
+{
+    var sContent =
+	"<div style='width:270px; height:150px'>"+	
+    "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>长沙市伊仕环保科技有限公司</h4>" +     
+    "<div style='float:left;margin:15px 0 0 0;line-height:1.5;font-size:13px; width:400px;'>电话：0731-89775666 / 88902866 <br/>传真：0731-84587633 <br/>邮箱：2857066791@qq.com<br/>地址：湖南省长沙市雨花区环保科技园国际企业中心11栋</div>" + 
+    "</div>";//要显示在信息窗口的详细信息
+    var marker = new BMap.Marker(point);// 创建标注
+    var infoWindow = new BMap.InfoWindow(sContent);//创建信息窗口对象
+    map.addOverlay(marker);// 将标注添加到地图中
+    marker.setAnimation(BMAP_ANIMATION_BOUNCE);//跳动的动画
+    marker.addEventListener("click", function()//点击标注弹出信息窗口
+    {          
+        this.openInfoWindow(infoWindow);
+        //图片加载完毕重绘infowindow
+        document.getElementById('imgDemo').onload = function()
+        {
+            infoWindow.redraw();
+        }
+    });
+}
+var point = new BMap.Point(113.03197,28.086175);//设置一个点坐标，用于创建标注
+addMarker(point);//调用标注创建函数
+</script>
+</body>
+</html>
+

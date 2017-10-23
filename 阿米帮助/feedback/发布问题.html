@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]><html class="ie ie6 lt8 lt9"><![endif]-->
+<!--[if IE 7]><html class="ie ie7 lt8 lt9"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 lt9"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<!--[if (gt IE 9) | !(IE)]><!--><html><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>title</title>
+<script>
+if(/*@cc_on!@*/false && document.documentMode === 10) document.documentElement.className+=' ie10';
+</script>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<script src="../javascript/jquery-1.9.1.min.js"></script>
+
+<script type="text/javascript" src="http://www.amiyx.com/scripts/jquery/Validform_v5.3.2_min.js"></script>
+    <script type="text/javascript" src="http://www.amiyx.com/scripts/lhgdialog/lhgdialog.js?skin=idialog"></script>
+    <script type="text/javascript" src="http://www.amiyx.com/scripts/layer/layer.js"></script>
+    <script type="text/javascript" src="http://www.amiyx.com/v1/js/layout.js"></script>
+    <script type="text/javascript" src="http://www.amiyx.com/scripts/swfupload/swfupload.js"></script>
+    <script type="text/javascript" src="http://www.amiyx.com/scripts/swfupload/swfupload.queue.js"></script>
+    <script type="text/javascript" src="http://www.amiyx.com/scripts/swfupload/swfupload.handlers.js"></script>
+     <link href="http://www.amiyx.com/v1/skin/default/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" charset="utf-8" src="http://www.amiyx.com/editor/kindeditor-min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="http://www.amiyx.com/editor/lang/zh_CN.js"></script>
+    <script src="http://www.amiyx.com/v1/plugins/code/prettify.js" type="text/javascript"></script>
+    <link href="http://www.amiyx.com/v1/plugins/code/prettify.css" rel="stylesheet" type="text/css" />
+
+
+
+
+    <script type="text/javascript">
+        var editor = "";
+        KindEditor.ready(function (K) {
+            editor = K.create('#txtContent', {
+                //上传管理
+                uploadJson: 'kindeditor/asp.net/upload_json.ashx',
+                //文件管理
+                fileManagerJson: 'kindeditor/asp.net/file_manager_json.ashx',
+                allowFileManager: true,
+                //设置编辑器创建后执行的回调函数
+                afterCreate: function () {
+                    var self = this;
+                    K.ctrl(document, 13, function () {
+                        self.sync();
+                        K('form[name=example]')[0].submit();
+                    });
+                    K.ctrl(self.edit.doc, 13, function () {
+                        self.sync();
+                        K('form[name=example]')[0].submit();
+                    });
+                },
+                //上传文件后执行的回调函数,获取上传图片的路径
+                afterUpload: function (url) {
+                    alert(url);
+                },
+                //编辑器高度
+                width: '700px',
+                //编辑器宽度
+                height: '200px;',
+                //配置编辑器的工具栏
+                items: [
+                'source', '|', 'undo', 'redo', '|', 'preview', 'print', 'template', 'code', 'cut', 'copy', 'paste',
+                'plainpaste', 'wordpaste', '|', 'justifyleft', 'justifycenter', 'justifyright',
+                'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
+                'superscript', 'clearhtml', 'quickformat', 'selectall', '|', 'fullscreen', '/',
+                'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold',
+                'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|', 'hr',
+                  'about'
+                ]
+            });
+            prettyPrint();
+        });
+        
+        function inputCheck() {
+            var s141 = $("#f_bbstitle").val(); if (s141 == "") { layer.tips('请填写通知标题', '#f_bbstitle', { tips: [2, '#0EB6BD'] }); return false; }
+            var s142 = editor.html(); if (s142 == "") { layer.tips('请填写通知内容', '#contentstxt', { tips: [2, '#0EB6BD'] }); return false; }
+        }
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            //初始化上传控件
+            $(".upload-img").each(function () {
+                $(this).InitSWFUpload({ sendurl: "../../tools/upload_ajax.ashx", flashurl: "../../scripts/swfupload/swfupload.swf" });
+            });
+        })
+
+        //添加附件方法重写
+        function uploadSuccess(file, serverData) {
+            try {
+                $("#hid_FileName").val(file.name);
+                //$("#span_FileName").append(file.name + ",");
+                $("#txtfilename").val(file.name + "|" + $("#txtfilename").val());
+                //$("#li_upload").hide();
+                $("#li_showFile").show();
+                var jsonstr = eval('(' + serverData + ')');
+                if (jsonstr.status == '0') {
+                    var progressObj = $(this.customSettings.upload_target).children(".upload-progress");
+                    progressObj.children(".txt").html(jsonstr.msg);
+                }
+                if (jsonstr.status == '1') {
+                    //如果是单文件上传，则赋值相应的表单
+                    if (this.customSettings.button_action == SWFUpload.BUTTON_ACTION.SELECT_FILE) {
+                        $(this.customSettings.upload_target).siblings(".upload-name").val(jsonstr.name);
+                        $(this.customSettings.upload_target).siblings(".upload-path").val(jsonstr.path);
+                        $(this.customSettings.upload_target).siblings(".upload-size").val(jsonstr.size);
+                        $("#imgid").attr("href", jsonstr.path);
+                        $("#txtImgUrl").val(jsonstr.path);
+
+                    } else {
+                        addImage($(this.customSettings.upload_target), jsonstr.path, jsonstr.thumb);
+                    }
+                    $("#txtfilepath").val(jsonstr.path + "|" + $("#txtfilepath").val());
+
+                    var strfiles = getFileDiv(file.name, jsonstr.path);
+                    $("#div_htmls").append(strfiles);
+
+                    var progressObj = $(this.customSettings.upload_target).children(".upload-progress");
+                    progressObj.children(".txt").html("上传成功：" + file.name);
+                }
+            } catch (ex) {
+                this.debug(ex);
+            }
+        }
+
+        function getFileDiv(filename, filepath) {
+            var str = "<span tag='" + filename + "'><a href=\"" + filepath + "\" target=\"_blank\" >" + filename + "</a>";
+            str += "<a href='javascript:;' title='点击移除' onclick=\"removeFile('" + filename + "','" + filepath + "')\" class=\"xjsc\"><img src=\"/v1/skin/default/close-icon.png\"></a>";
+            str += "</span>";
+            return str;
+
+        }
+
+        function removeFile(filename, filepath) {
+            var names = $("#txtfilename").val();
+            var paths = $("#txtfilepath").val();
+            $("#div_htmls").find("span").find("a").each(function () {
+                var cla = $(this).hasClass("xjsc");
+                var tag = $(this).parent().attr("tag");
+                //if (cla) alert(names);
+                if (cla && tag == filename) {
+                    $(this).parent().remove();
+                    names = names.replace(filename + "|", ""); names = names.replace(filename, "");
+                    paths = paths.replace(filepath + "|", ""); paths = paths.replace(filepath, "");
+                    //alert(names);
+                }
+            });
+            $("#txtfilename").val(names);
+            $("#txtfilepath").val(paths);
+
+            if ($("#txtfilename").val() == "") {
+                $("#li_showFile").hide();
+            }
+            //var str = "诉讼费等方法"; str = str.replace("方法", ""); alert(str);
+        }
+    </script>
+<!--[if lt IE 9]>
+<script src="javascript/html5.js"></script>
+<![endif]-->
+</head>
+<style>
+.content-tab-wrap{ margin-top:0;}
+</style>
+<body class="mainbody">
+    <form name="form1" method="post" action="suggest_add.aspx?action=Add" id="form1" AUTOCOMPLETE="OFF">
+
+   
+    <!--内容-->
+    
+    <div class="bai_gao">
+    <div class="content-tab-wrap">
+        <div id="floatHead" class="content-tab">
+            <div class="content-tab-ul-wrap">
+                <ul>
+                    <li><a href="javascript:;" onClick="tabs(this);" class="selected">问题发布</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="tab-content">
+        
+        <dl>
+            <dt>问题类别：<font color="#FF0000">*</font></dt>
+            <dd>
+                 <div class="rule-single-select"> 
+                      <select name="ddlTypeID" id="ddlTypeID" class="dropdown">
+                        <option value="1">使用问题</option>
+                        <option value="2">意见建议</option>
+                    
+                    </select>
+                </div>
+            </dd>
+        </dl>
+
+        <dl>
+            <dt>标题：<font color="#FF0000">*</font></dt>
+            <dd>
+                <input name="txtTitle" type="text" id="txtTitle" class="input normal" />
+            </dd>
+        </dl>  
+       
+        <dl>
+            <dt>问题描述：<font color="#FF0000">*</font></dt>
+            <dd>
+                <textarea name="txtContent" rows="2" cols="20" id="txtContent" style="height:180px;width:80%;">
+</textarea>
+                <input type="text" id="contentstxt" style=" border:0px;width:1%; margin-top:-40px; height:1px; position:absolute; " />
+            </dd>
+        </dl>
+
+        <dl>
+	        <dt></dt>
+            <dd>
+    	        <div>
+            <ul id="ul_File" style="padding-bottom:20px; ">        
+                <li id="li_upload" style="width:100%; text-align:left;">
+                  <input name="hid_FileName" type="hidden" id="hid_FileName" />
+                    <div style="display:none;"><input name="txtImgUrl" type="text" id="txtImgUrl" class="input normal upload-path" /></div>
+                    <div style=" margin-right:10px; float:left;" class="upload-box upload-img">            
+                    </div>
+                    <div id="li_showFile" style="float:left; display:none;">
+                    <img src="../askin/default/fujian.png" align="center" alt="附件">
+                    </div>  
+
+                    <div id="div_htmls" style="float:left;"></div>
+
+                    <br />
+                    <input name="txtfilename" type="hidden" id="txtfilename" />
+                    <input name="txtfilepath" type="hidden" id="txtfilepath" />          
+                </li>
+           
+            </ul>
+            </div>
+            </dd>
+           </dl>
+
+     </div>
+         
+    </div>
+    <!--内容-->
+    <!--工具栏-->
+    <div class="page-footer">
+        <div class="btn-list">
+            <input type="submit" name="btnSubmit" value="提 交" onclick="return check();" id="btnSubmit" class="btn" />
+            <input name="btnReturn" type="button" value="返回上一页" class="btn yellow" onClick="javascript:history.back(-1);" />
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <!--/工具栏-->
+    </form>
+    <script type="text/javascript">
+        function check() {
+            var js_type = $("#ddlTypeID").val(); if (js_type == "") { $("#ddlTypeID").focus(); layer.tips('请选择问题类型', '#ddlTypeID', { tips: [2, '#0EB6BD'] }); return false; }
+            var js_title = $("#txtTitle").val(); if (js_title == "") { layer.tips('请填写一个标题', '#txtTitle', { tips: [2, '#0EB6BD'] }); return false; }
+            var js_content = editor.html(); if (js_content == "") { layer.tips('请输入问题描述', '#contentstxt', { tips: [2, '#0EB6BD'] }); return false; }
+            return true;
+        }
+        </script>
+</body>
+
+</html>
+
+

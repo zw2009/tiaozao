@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]><html class="ie ie6 lt8 lt9"><![endif]-->
+<!--[if IE 7]><html class="ie ie7 lt8 lt9"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 lt9"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<!--[if (gt IE 9) | !(IE)]><!--><html><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>title</title>
+<script>
+if(/*@cc_on!@*/false && document.documentMode === 10) document.documentElement.className+=' ie10';
+</script>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="../css/common.css">
+<script src="../javascript/jquery-1.9.1.min.js"></script>
+<script src="../javascript/common.js"></script>
+
+<script src="build/mediaelement-and-player.min.js"></script>	
+<link rel="stylesheet" href="build/mediaelementplayer.min.css" />
+<!--[if lt IE 9]>
+<script src="javascript/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="sucai">
+	
+    <h2>权限设置</h2>
+    <div class="vidoe" style="text-align:center; margin:0 auto;">
+    	<video width="888" height="500" src="vod/list7_5.mp4" type="video/mp4" id="player1" poster="img.jpg" controls preload="none"></video>
+    </div>
+
+	<script>
+    $('audio,video').mediaelementplayer({
+        success: function(player, node) {
+            $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+        }
+    });
+    </script>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>列表详情</title>
+		<script type="text/javascript" src="js/vue.min.js" ></script>
+		<script type="text/javascript" src="js/vue-resource.js" ></script>
+		<script type="text/javascript" src="js/url.js" ></script>
+	</head>
+
+	<body>
+		<div id="body">
+			<header>
+				<a @click="back"></a>
+				<p>订单详情</p>
+			</header>
+			<div class="goods">
+				<p>交易成功</p>
+			</div>
+			<div class="news">
+				<img src="img/dtbj.png"/>
+				<span>收货人：{{user.name}}</span>
+				<p>收货地址：{{user.address}}</p>
+			</div>
+			<!--中间内容-->
+			<div class="titleShop">
+				<i><img src="img/ct1.png" alt="" /></i>
+				<p>三际官方旗舰店
+					<a href=""></a>
+				</p>
+			</div>
+			<product class="content" :product="item" :product-num="productNum[i]" v-for="(item,i) in products">
+				
+			
+				<!--<i><img src="img/ct2.png"/></i>
+				<div class="contentText">
+					<p>上海移动100元 充值 快充 即时到账...</p>
+					<div class="contentNem">
+						<span>￥99.80</span>
+						<span>￥99.80</span>
+						<em>x1</em>
+					</div>
+				</div>-->
+			</product>
+			<div class="computer">
+				<div class="price">
+					<p>商品总价</p><span>￥{{result.totalCost}}</span> </div>
+				<div class="price">
+					<p>运费</p><span>{{result.state}}</span> 
+				</div>
+				<div class="price fontPic price_1" @click="monet">
+					<p>订单总价</p><span>￥{{result.totalCost}}</span> </div>
+					<a v-show="jiao"></a>
+				</div>
+				<div class="computer comp">
+				<div class="price fontPic monet">
+					<p>实付款</p><span>￥{{result.totalCost}}</span>
+				</div>
+				</div>
+				<div class="see">
+				<span>
+					<i><strong>联系卖家</strong></i>
+					<em></em>
+					<i @click="phoneCall"><strong>拨打电话</strong></i>
+				</span>
+				</div>
+			</div>
+		<script type="text/javascript" src="js/index.js" ></script>
+	</body>
+</html>

@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]><html class="ie ie6 lt8 lt9"><![endif]-->
+<!--[if IE 7]><html class="ie ie7 lt8 lt9"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 lt9"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<!--[if (gt IE 9) | !(IE)]><!--><html><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>title</title>
+<script>
+if(/*@cc_on!@*/false && document.documentMode === 10) document.documentElement.className+=' ie10';
+</script>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<script src="../javascript/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://www.amiyx.com/scripts/lhgdialog/lhgdialog.js?skin=idialog"></script>
+<script type="text/javascript" src="http://www.amiyx.com/v1/js/layout.js"></script>
+<script type="text/javascript" src="http://www.amiyx.com/v1/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="http://www.amiyx.com/v1/js/perfect-scrollbar.js"></script>
+<link href="http://www.amiyx.com/v1/css/pagination.css" rel="stylesheet" type="text/css" />
+<link href="http://www.amiyx.com/v1/skin/default/style.css" rel="stylesheet" type="text/css" />
+
+<!--[if lt IE 9]>
+<script src="javascript/html5.js"></script>
+<![endif]-->
+</head>
+<style>
+.sucai{ padding:0 20px 20px 20px;}
+.sucai h2{ font-size:16px; line-height:30px; font-weight:bold;}
+.toolbar-wrap-xg{ margin:0; padding:0;}
+</style>
+<body>
+<div class="sucai">	
+    <h2>我提的问题</h2>
+    <div class="toolbar-wrap-xg">    
+        <div id="floatHead" class="toolbar">
+            <div class="l-list">
+                <ul class="icon-list">
+                    <li><a class="add" href="发布问题.html"><i></i>
+                        <span>发布问题</span></a></li>
+                    <li><a class="all" href="javascript:;" onClick="checkAll(this);"><i></i><span>全选</span></a></li>
+                    <li>
+                        <a onclick="return ExePostBack(&#39;btnDelete&#39;,&#39;是否继续？&#39;);" id="btnDelete" class="del" href="javascript:__doPostBack(&#39;btnDelete&#39;,&#39;&#39;)"><i></i><span>删除</span></a></li>
+                </ul>
+                <div class="menu-list" style="padding-top:12px;">        
+                    <div class="rule-single-select"> 
+                      <select name="ddlStatus" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ddlStatus\&#39;,\&#39;\&#39;)&#39;, 0)" id="ddlStatus">
+                            <option selected="selected" value="">状态</option>
+                            <option value="1">未奖励</option>
+                            <option value="100">已奖励</option>
+                        
+                        </select>
+                    </div>
+                </div>
+                <div class="r-list" style="padding-top:12px;">
+                    <input name="txtKeywords" type="text" id="txtKeywords" class="keyword" style=" height:30px;" />
+                    <a id="lbtnSearch" class="btn-search" href="javascript:__doPostBack(&#39;lbtnSearch&#39;,&#39;&#39;)" style=" height:30px;"></a>
+                </div>
+            </div>
+        </div>
+        <!--/工具栏-->
+        <!--列表-->
+        
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ltable">
+                    <tr>
+                        <th width="5%">
+                            选择
+                        </th>                    
+                        <th align="center" width="15%">
+                            标题
+                        </th>                    
+                        <th align="center" width="10%">
+                            问题类型
+                        </th>
+                        <th align="center" width="10%">
+                            奖励状态
+                        </th>
+                        <th align="center" width="10%">
+                            创建人
+                        </th>
+                        <th align="center" width="10%">
+                            创建时间
+                        </th>
+                        <th align="center" width="10%">
+                            查看数
+                        </th>
+                        <th align="center" width="10%">
+                            回复数
+                        </th>
+                        <th width="10%">
+                            操作
+                        </th>
+                    </tr>
+            
+                <tr>
+                    <td align="center">
+                        <span class="checkall"><input id="rptList_ctl01_chkId" type="checkbox" name="rptList$ctl01$chkId" /></span><input type="hidden" name="rptList$ctl01$hidId" id="rptList_ctl01_hidId" value="14" />
+                    </td>
+                                  
+                   
+                    <td align="center">
+                            <a href="问题详情.html">测试啊</a> 
+                    </td>
+                     <td align="center">
+                            使用问题 
+                    </td>
+                    <td align="center">
+                            <font color='blue'>未奖励</font> 
+                    </td>
+                    <td align="center">
+                            管理员
+                    </td>
+                    <td align="center">
+                            2016-04-19
+                    </td>
+                    <td align="center">
+                            <b style="color:Green;">4</b>
+                    </td>
+                    <td align="center">
+                            <b style="color:Green;">0</b>
+                    </td>
+                    <td align="center">
+                        <a href="发布问题.html">修改</a>
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td align="center">
+                        <span class="checkall"><input id="rptList_ctl02_chkId" type="checkbox" name="rptList$ctl02$chkId" /></span><input type="hidden" name="rptList$ctl02$hidId" id="rptList_ctl02_hidId" value="13" />
+                    </td>
+                                  
+                   
+                    <td align="center">
+                            <a href="问题详情.html">阿斯蒂芬撒旦 </a> 
+                    </td>
+                     <td align="center">
+                            使用问题 
+                    </td>
+                    <td align="center">
+                            <font color='blue'>未奖励</font> 
+                    </td>
+                    <td align="center">
+                            管理员
+                    </td>
+                    <td align="center">
+                            2016-03-17
+                    </td>
+                    <td align="center">
+                            <b style="color:Green;">2</b>
+                    </td>
+                    <td align="center">
+                            <b style="color:Green;">0</b>
+                    </td>
+                    <td align="center">
+                        <a href="发布问题.html">修改</a>
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td align="center">
+                        <span class="checkall"><input id="rptList_ctl03_chkId" type="checkbox" name="rptList$ctl03$chkId" /></span><input type="hidden" name="rptList$ctl03$hidId" id="rptList_ctl03_hidId" value="12" />
+                    </td>
+                                  
+                   
+                    <td align="center">
+                            <a href="问题详情.html">阿斯蒂芬撒旦 </a> 
+                    </td>
+                     <td align="center">
+                            使用问题 
+                    </td>
+                    <td align="center">
+                            <font color='blue'>未奖励</font> 
+                    </td>
+                    <td align="center">
+                            管理员
+                    </td>
+                    <td align="center">
+                            2016-03-17
+                    </td>
+                    <td align="center">
+                            <b style="color:Green;">0</b>
+                    </td>
+                    <td align="center">
+                            <b style="color:Green;">0</b>
+                    </td>
+                    <td align="center">
+                        <a href="发布问题.html">修改</a>
+                    </td>
+                </tr>
+            
+                
+                </table>
+            
+        <!--/列表-->
+    </div>
+
+
+
+</div>
+</body>
+</html>
+
+

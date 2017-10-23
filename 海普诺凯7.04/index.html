@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]><html class="ie ie6 lt8 lt9"><![endif]-->
+<!--[if IE 7]><html class="ie ie7 lt8 lt9"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 lt9"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<!--[if (gt IE 9) | !(IE)]><!--><html><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>title</title>
+<script>
+if(/*@cc_on!@*/false && document.documentMode === 10) document.documentElement.className+=' ie10';
+</script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/common.css">
+<script src="javascript/jquery-1.9.1.min.js"></script>
+<script src="javascript/common.js"></script>
+<!--banner-->
+<script type="text/javascript" src="javascript/slides.min.jquery.js"></script>
+<script type="text/javascript">
+	$(function(){		
+		$('#slides').slides({
+			preload: true,
+			play: 5000,
+			pause: 2500,
+			slideSpeed:700,
+			animationStart: function(){
+				$('.caption').animate({
+					bottom:-35
+				},100);
+			},
+			animationComplete: function(current){
+				$('.caption').animate({
+					bottom:0
+				},200);
+				if (window.console && console.log) {
+					// example return of current slide number
+					console.log(current);
+				};
+			}
+		});
+	});
+	
+</script>
+<!--banner-->
+<!--视频-->
+
+<!--视频-->
+<!--[if lt IE 9]>
+<script src="javascript/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<!--头部-->
+<div class="header cf">
+	<a href="#" class="logo"><img src="images/logo.png"/></a>
+    <div class="head_right">
+    	<ul class="cf">
+        	<li style="background:url(images/t1.png) no-repeat left"><a href="#"><h3>悠蓝妈妈关爱热线</h3><span>400-8801897</span></a></li>
+            <li style="background:url(images/t3.png) no-repeat left"><a href="#"><h3>悠蓝官方旗舰店</h3><span>&nbsp;</span></a></li>
+            <li style="background:url(images/t2.png) no-repeat left"><a href="#"><h3><br/>荷兰Neolac 官网</h3></a></li>
+        </ul>
+    </div>
+</div>
+<!--头部-->
+<!--导航-->
+<div class="nav">
+	<ul>
+    	<li class="open"><a href="#">&nbsp;&nbsp;首&nbsp;&nbsp;页</a></li>
+        <li><a href="#">了解悠蓝</a></li>
+        <li><a href="#">有机认证</a></li>
+        <li><a href="#">真伪查询</a></li>
+        <li>
+        	<a href="#">悠蓝妈妈</a>
+        	<div class="nav_u">
+            	<div class="nav_u_zon">
+                	<a href="#">尊享服务</a>
+                    <span><img src="images/nav_span.png"/></span>
+                    <a href="#">活动及问答</a>
+                </div>
+                <div class="nav_u_bottom"></div>
+            </div>
+        </li>
+        <li><a href="#">积分商城</a></li>        
+    </ul>
+</div>
+<!--导航-->
+<!--banner-->
+<div id="container">
+    <div id="example">
+        <div id="slides">
+            <div class="slides_container">
+                <div> <img src="images/banner1.jpg" alt=""> </div>
+                <div> <img src="images/banner2.jpg" alt=""> </div>                
+            </div>
+             <a class="prev"><img src="images/banner_prve.png"></a>
+             <a class="next"><img src="images/banner_next.png" ></a>
+        </div>
+    </div>
+</div>
+<!--banner-->
+<!--悠蓝有机-->
+<div class="ylyj">
+	<h3>悠蓝有机</h3>
+    <span>来自荷兰王国有机奶粉品牌</span>
+    <img src="images/hua.png"/>
+    <a href="#" class="ljxq">了解详情</a>
+    <ul class="cf">
+    	<li><img src="images/r1.png"/><h4>荷兰有机食品认证</h4><p>Dutch organic certification</p></li>
+        <li><img src="images/r2.png"/><h4>欧 盟 有 机 食 品 认 证</h4><p>NL-BIO-01 EU/non-EU Agriculture</p></li>
+        <li><img src="images/r3.png"/><h4>本产品通过中绿华夏有机食品认证中心认证</h4><p>his organic product is certificated by COFCC</p></li>
+    </ul>
+</div>
+<!--悠蓝有机-->
+<!--分割线-->
+<div class="fgx"></div>
+<!--分割线-->
+<!--悠蓝亲萃有机-->
+<div class="ylqcyj cf">
+	<div class="ylqcyj_wa">
+    	<img src="images/hua.png"/>
+    	<h3>悠蓝亲萃有机</h3>
+        <span>荷兰原装进口·欧洲同步销售</span>
+        <a href="#" class="ljxq">了解详情</a>
+    </div>
+</div>
+<!--悠蓝亲萃有机-->
+<!--视频-->
+<div class="vidoe">
+<a href="javascript:;" class="video_button" data-video="mobile.mp4" data-img="img.jpg" >视频播放</a>
+</div>
+<div class="video_appbox">
+	<div class="video_t" id="player1"></div>
+    <div class="mask"></div>
+</div>
+<script src="javascript/swfobject.js"></script>
+<script src="javascript/video.js"></script>
+<!--视频-->
+<!--资讯中心-->
+<div class="zxzx">
+	<span>资讯中心</span>
+    <p>悠蓝全球有机乳业联盟峰会首度召开</p>
+</div>
+<!--资讯中心-->
+<!--分割线-->
+<div class="fgx2"></div>
+<!--分割线-->
+<!--悠蓝天生不凡-->
+<div class="tsbf">
+	<h3>悠蓝天生不凡</h3>
+    <ul class="cf">
+    	<li><a href="#"><img src="images/f1.png"/><span><br/>3大有机认证标</span></a></li>
+        <li><a href="#"><img src="images/f2.png"/><span><br/>N2亲萃有机配方</span></a></li>
+        <li><a href="#"><img src="images/f3.png"/><span><br/>100%荷兰原装进口</span></a></li>
+        <li><a href="#"><img src="images/f4.png"/><span>源自百年制乳<br/>荷兰海普诺凯</span></a></li>
+    </ul>
+</div>
+<!--悠蓝天生不凡-->
+<div class="footer">
+	<span style="font-size:17px;"><a href="#">联系我们</a><i>|</i>客服热线：400-8801897</span>
+    <span>悠蓝温馨提示您，母乳是宝宝最理想的食品，悠蓝支持母乳喂养</span>
+</div>
+<script type="text/javascript" src="http://neolac.com/templates/main/javascript/scrolltopcontrol.js"></script>
+
+</body>
+</html>

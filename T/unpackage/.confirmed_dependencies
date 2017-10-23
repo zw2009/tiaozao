@@ -1,0 +1,287 @@
+{
+	"denglu.html": {
+		"resources": [
+			"js/denglu.js",
+			"css/denglu.css",
+			"img/tx.png",
+			"js/md5.js",
+			"img/2.png",
+			"img/1.png",
+			"personal.html",
+			"css/common.css",
+			"ForgotPassword.html"
+		],
+		"refer": [
+			"personal.html",
+			"ForgotPassword.html"
+		]
+	},
+	"dangpu.html": {
+		"resources": [
+			"js/url.js",
+			"img/dangpu/bkg_01.jpg",
+			"img/line.jpg",
+			"css/common.css",
+			"js/dangpu.js",
+			"js/jquery-3.2.1.js",
+			"css/hockshop.css",
+			"img/df_03.jpg",
+			"css/dbqh.css",
+			"xiangqing.html",
+			"shopcar.html",
+			"personal.html",
+			"img/ddlb_bkg.png"
+		],
+		"refer": [
+			"xiangqing.html",
+			"shopcar.html",
+			"personal.html"
+		]
+	},
+	"xiangqing.html": {
+		"resources": [
+			"denglu.html",
+			"js/jquery-3.2.1.js",
+			"js/xiangqing.js",
+			"css/xiangqing.css",
+			"img/xiangqing_03.jpg",
+			"dangpu.html",
+			"shopcar.html",
+			"css/common.css",
+			"js/url.js",
+			"img/collection/coll_08.gif",
+			"order_form.html",
+			"img/collection/coll_09.gif",
+			"footprint.html"
+		],
+		"refer": [
+			"denglu.html",
+			"dangpu.html",
+			"shopcar.html",
+			"order_form.html",
+			"footprint.html"
+		]
+	},
+	"shopcar.html": {
+		"resources": [
+			"css/shopcar.css",
+			"js/shopcur.js",
+			"js/url.js",
+			"img/dangpu/bkg_01.jpg",
+			"css/common.css",
+			"js/jquery-3.2.1.js",
+			"dangpu.html",
+			"img/df_03.jpg",
+			"css/dbqh.css",
+			"order_form.html",
+			"personal.html",
+			"xiangqing.html"
+		],
+		"refer": [
+			"dangpu.html",
+			"order_form.html",
+			"personal.html",
+			"xiangqing.html"
+		]
+	},
+	"personal.html": {
+		"resources": [
+			"img/grzx/tips.png",
+			"img/grzx/gz_08.png",
+			"js/personal.js",
+			"img/grzx/tips_05.png",
+			"img/grzx/per_bkg.png",
+			"img/grzx/gz_10.png",
+			"img/grzx/tips_03.png",
+			"img/grzx/gz_05.png",
+			"img/grzx/gz_02.png",
+			"img/grzx/tips_01.png",
+			"denglu.html",
+			"img/grzx/tips_02.png",
+			"css/personal.css",
+			"img/dangpu/bkg_01.jpg",
+			"css/common.css",
+			"dangpu.html",
+			"css/dbqh.css",
+			"js/url.js",
+			"js/jquery-3.2.1.js",
+			"shopcar.html",
+			"collection.html",
+			"order_list.html",
+			"installpersonal.html",
+			"footprint.html",
+			"my_order.html"
+		],
+		"refer": [
+			"denglu.html",
+			"dangpu.html",
+			"shopcar.html",
+			"collection.html",
+			"order_list.html",
+			"installpersonal.html",
+			"footprint.html",
+			"my_order.html"
+		]
+	},
+	"order_form.html": {
+		"resources": [
+			"img/tm.png",
+			"css/order_form.css",
+			"img/dtbj.png",
+			"js/order_form.js",
+			"order_list.html",
+			"css/common.css",
+			"shopcar.html",
+			"index.html",
+			"js/jquery-3.2.1.js",
+			"xiangqing.html"
+		],
+		"refer": [
+			"order_list.html",
+			"shopcar.html",
+			"index.html",
+			"xiangqing.html"
+		]
+	},
+	"order_list.html": {
+		"resources": [
+			"js/vue-resource.js",
+			"js/order_list.js",
+			"css/common.css",
+			"img/ddlb.png",
+			"img/ddlb_bkg.png",
+			"js/vue.min.js",
+			"css/order_list.css",
+			"order_form.html",
+			"img/tm.png",
+			"personal.html",
+			"evaluate.html",
+			"js/jquery-3.2.1.js",
+			"js/url.js"
+		],
+		"refer": [
+			"order_form.html",
+			"personal.html",
+			"evaluate.html"
+		]
+	},
+	"collection.html": {
+		"resources": [
+			"css/common.css",
+			"css/collection.css",
+			"personal.html",
+			"js/collection.js",
+			"js/jquery-3.2.1.js",
+			"img/collection/coll_06.gif",
+			"img/collection/coll_05.gif"
+		],
+		"refer": [
+			"personal.html"
+		]
+	},
+	"evaluate.html": {
+		"resources": [
+			"js/url.js",
+			"img/images/pingjia_07.jpg",
+			"css/common.css",
+			"js/evaluate.js",
+			"css/evaluate.css",
+			"img/xx.jpg",
+			"js/jquery-3.2.1.js",
+			"order_list.html",
+			"index.html",
+			"img/bx.jpg",
+			"comment.html"
+		],
+		"refer": [
+			"order_list.html",
+			"index.html",
+			"comment.html"
+		]
+	},
+	"index.html": {
+		"resources": [
+			"img/ct1.png",
+			"js/vue-resource.js",
+			"css/index.css",
+			"img/wangwang.jpg",
+			"css/common.css",
+			"img/phone.jpg",
+			"js/vue.min.js",
+			"evaluate.html",
+			"js/index.js",
+			"order_form.html"
+		],
+		"refer": [
+			"evaluate.html",
+			"order_form.html"
+		]
+	},
+	"comment.html": {
+		"resources": [
+			"img/head.png",
+			"img/df_10.jpg",
+			"css/comment.css",
+			"img/bao_03.png",
+			"css/common.css",
+			"js/comment.js",
+			"evaluate.html"
+		],
+		"refer": [
+			"evaluate.html"
+		]
+	},
+	"installpersonal.html": {
+		"resources": [
+			"css/installpersonal.css",
+			"personal.html",
+			"js/installpersonal.js"
+		],
+		"refer": [
+			"personal.html"
+		]
+	},
+	"footprint.html": {
+		"resources": [
+			"css/footprint.css",
+			"img/zujis_06.png",
+			"js/jquery-3.2.1.js",
+			"js/footprint.js",
+			"css/common.css",
+			"xiangqing.html",
+			"shopcar.html",
+			"img/collection/coll_02.gif",
+			"personal.html"
+		],
+		"refer": [
+			"xiangqing.html",
+			"shopcar.html",
+			"personal.html"
+		]
+	},
+	"my_order.html": {
+		"resources": [
+			"js/my_order.js",
+			"css/common.css",
+			"personal.html",
+			"css/my_order.css",
+			"js/jquery-3.2.1.js",
+			"img/images/my_order_03.jpg"
+		],
+		"refer": [
+			"personal.html"
+		]
+	},
+	"ForgotPassword.html": {
+		"resources": [
+			"denglu.html",
+			"css/common.css",
+			"js/ForgotPassword.js",
+			"css/zhmm.css",
+			"img/gg.jpg"
+		],
+		"refer": [
+			"denglu.html"
+		]
+	}
+}

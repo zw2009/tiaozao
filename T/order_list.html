@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/order_list.css"/>
+		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+		<script type="text/javascript" src="js/url.js" ></script>
+		<script type="text/javascript" src="js/vue.min.js" ></script>
+		<script type="text/javascript" src="js/vue-resource.js" ></script>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body>
+		<header>
+			<p @click="back"></p>
+			<span>订单列表</span>
+			<div class="car">
+				<img @click="car"  src="img/ddlb.png"/>
+			</div>
+			<div class="headNav" v-show="none">
+				<a>消息</a>
+				<a @click="hef">首页</a>
+			</div>
+		</header>
+		<content>
+			<div class="searchback" :style="style">
+				<div class="search">
+					<input placeholder="搜索所有订单" @focus="searchFocus" :style="mar" @blur="searchBlur" class="input" v-model="inputValue"/>
+				</div>
+			</div>
+
+			<goods class="goods" v-for="item in result" :product="item">
+				<!--<div class="order">
+					<div class="recharge">
+						<p>君宝话费充值专营店<i></i></p>
+						<span>交易成功</span>
+					</div>
+					<div class="good">
+						<img src="img/podu.png"/>
+						<p>上海移动100元充值 快充 即时到账...</p>
+						<div class="cash">
+							<i>￥99.80</i>
+							<em>￥99.80</em>
+							<strong>X<i>1</i></strong>
+						</div>
+					</div>
+				</div>
+		<div class="money">共1件商品 合计￥<i>99.80</i>(含运费￥0.00)</div>
+		<div class="evaluate">
+			<a>评价</a>
+			<a>删除订单</a>
+		</div>-->
+			</goods>
+		</content>
+		<script type="text/javascript" src="js/order_list.js" ></script>
+	</body>
+</html>

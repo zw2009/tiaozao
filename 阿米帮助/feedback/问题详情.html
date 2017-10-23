@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]><html class="ie ie6 lt8 lt9"><![endif]-->
+<!--[if IE 7]><html class="ie ie7 lt8 lt9"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 lt9"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<!--[if (gt IE 9) | !(IE)]><!--><html><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>title</title>
+<script>
+if(/*@cc_on!@*/false && document.documentMode === 10) document.documentElement.className+=' ie10';
+</script>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<script src="../javascript/jquery-1.9.1.min.js"></script>
+	<link href="http://www.amiyx.com/css/css.css" rel="stylesheet" type="text/css" />
+    <link href="http://www.amiyx.com/css/pagination.css" rel="stylesheet" type="text/css" />
+    <link href="http://www.amiyx.com/v1/skin/default/style.css" rel="stylesheet" type="text/css" />    
+    <script src="http://www.amiyx.com/scripts/layer/layer.js" type="text/javascript"></script>
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("div.dashang_yin").hide();
+            $(".zhai_xq610>ul>li>samp").click(function () {
+                $(this).parent().parent().parent().next(".dashang_yin").slideToggle("slow");
+            });
+
+        });
+
+
+        function Lauds_add(id) {
+            if (id > 0) {
+                $.ajax({
+                    type: "GET",
+                    url: "/tools/submit_ajax.ashx",
+                    data: { action: "s_lauds_add", rid: id },
+                    success: function (data) {
+                        if (data != "") {
+                            //alert(data); 
+                            var json = $.parseJSON(data);
+                            if (json.status == 1) {
+                                $("#e_lauds_" + id).show();
+                                $("#f_lauds_" + id).html(json.msg);
+                                $("#a_lauds_" + id).hide();
+                            } else {
+                                layer.alert(json.msg);
+                            }
+                        }
+
+                    }
+                });
+            }
+        }
+
+        function reply_add(id) {
+            var suggestid = $("#hidpid").val();
+            var content = $("#txtcont_" + id).val();
+            //alert(problemid + " cont:" + content);
+            if (id > 0) {
+                $.ajax({
+                    type: "GET",
+                    url: "/tools/submit_ajax.ashx",
+                    data: { action: "s_reply_add", parentid: id, suggestid: suggestid, txtContent: content },
+                    success: function (data) {
+                        if (data != "") {
+                            //alert(data); 
+                            var json = $.parseJSON(data);
+                            //如果成功则追加html到ul
+                            if (json.status == 1) {
+                                $("#ullist_" + id).before(json.msg);
+                                $("#txtcont_" + id).val("");
+                            } else {
+                                layer.alert(json.msg);
+                            }
+                        }
+
+                    }
+                });
+            }
+        }
+        function appoint() {
+            var problemid = $("#hidpid").val();
+            if (problemid > 0) {
+                var index = layer.open({
+                    title: "指定处理人",
+                    type: 2,
+                    area: ['480px', '280px'],
+                    fix: false, //不固定
+                    maxmin: false,
+                    content: '/v1/dialog/dialog_appoint.aspx?problemid=' + problemid
+                });
+            }
+        }
+        function gold(rid, userid, problemid) {
+            var index = layer.open({
+                title: "金币打赏",
+                type: 2,
+                area: ['480px', '220px'],
+                fix: false, //不固定
+                maxmin: false,
+                content: '/v1/dialog/dialog_glod.aspx?rid=' + rid + '&userid=' + userid + '&problemid=' + problemid
+            });
+        }
+        //确认窗口后跳转
+        function ok_confirm(url, msg) {
+            //询问框
+            layer.confirm(msg, {
+                title: "提示信息",
+                btn: ['确定', '取消'], //按钮
+                shade: false //不显示遮罩
+            }, function () {
+                layer.msg('已采纳', { icon: 1 });
+                if (url != "") {
+                    setTimeout("window.location.href = '" + url + "'", 1000);
+                }
+            }, function () {
+                //layer.msg('奇葩么么哒', { shift: 6 });
+            });
+        }
+    </script>
+
+
+<!--[if lt IE 9]>
+<script src="javascript/html5.js"></script>
+<![endif]-->
+</head>
+<style>
+.content-tab-wrap{ margin-top:0;}
+</style>
+<body style="background:#ececec;">
+    <form name="form1" method="post" action="suggest_details.aspx?id=14" id="form1"> 
+
+    <!--工具栏-->
+    <div class="toolbar-wrap" style="background:#ececec;">    
+        <div class="widgetyy-huise">
+        <div class="widgetyy">                
+            <div class="biaoti">
+                <ul>
+                    <li>
+                        <h3>测试啊</h3>
+                     </li>
+                     <li>
+                        <h5>作者：管理员 &nbsp; 最后更新时间：2016-04-19 17:40:19</h5>
+                     </li>
+                     <li>
+                        <p>测试啊</p>
+                        <div id="div_htmls" style="float:left;"></div>                            
+                    </li>                        
+                </ul>									
+            </div> <!-- /widget-content -->
+             <div class="zhai_xq6">
+                <div class="zhai_xq60">
+                     <span>评论（<s style="color:Red">0</s>）</span>
+                     <samp></samp>
+                </div>
+               <div style="clear:both; padding-top:30px;">&nbsp;</div>
+                    <div id="plkid" style="display:block"> 
+                         <div class="control-group">
+                            <div class="controls">
+                            <textarea name="txtReply" id="txtReply" rows="2" cols="20" placeholder="如果你有更好的处理办法告诉我们吧！" class="input" style="height:110px;width:800px;"></textarea>
+                            </div> <!-- /controls -->
+                         </div> <!-- /control-group -->
+                        
+                         <div class="form-actions" style="text-align:right; margin-top:10px; padding-bottom:50px;">
+                             <input type="submit" name="btnSubmit" value="返回上一页" onClick="javascript:history.back(-1);" class="btn" />
+                             <input type="submit" name="btnSubmit" value="发表评论" onclick="return check();" id="btnSubmit" class="btn" />
+                         </div> <!-- /form-actions -->					
+                    </div>
+                    <!-- /widget-content -->
+                </div> <!-- /widget -->
+            </div>
+        </div>
+    </div>
+    </form>
+    <script type="text/javascript">
+        function check() {
+            var js_content = $("#txtReply").val();
+            if (js_content == "") {
+                $("#txtReply").focus();
+                layer.tips('亲，至少写点儿什么吧', '#txtReply', { tips: [2, '#0EB6BD'] });
+                return false;
+            }
+            return true;
+        }
+        </script>
+</body>
+
+</html>
+
+

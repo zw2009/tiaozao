@@ -1,0 +1,797 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]><html class="ie ie6 lt8 lt9"><![endif]-->
+<!--[if IE 7]><html class="ie ie7 lt8 lt9"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 lt9"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<!--[if (gt IE 9) | !(IE)]><!--><html><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>title</title>
+<script>
+if(/*@cc_on!@*/false && document.documentMode === 10) document.documentElement.className+=' ie10';
+</script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/common.css">
+<script src="javascript/jquery-1.9.1.min.js"></script>
+<script src="javascript/common.js"></script>
+<!--[if lt IE 9]>
+<script src="javascript/html5.js"></script>
+<![endif]-->
+<!--banner-->
+<script type="text/javascript" src="javascript/slides.min.jquery.js"></script>
+<script type="text/javascript">
+	$(function(){		
+		$('#slides').slides({
+			preload: true,
+			play: 5000,
+			pause: 2500,
+			slideSpeed:700,
+			animationStart: function(){
+				$('.caption').animate({
+					bottom:-35
+				},100);
+			},
+			animationComplete: function(current){
+				$('.caption').animate({
+					bottom:0
+				},200);
+				if (window.console && console.log) {
+					// example return of current slide number
+					console.log(current);
+				};
+			}
+		});
+	});
+	
+</script>
+<!--banner-->
+<script type="text/javascript" src="javascript/event.js"></script>
+</head>
+<body>
+<!--头部-->
+<div class="header">
+	<div class="header_top">
+    	<span>
+        	<a href="#" class="ico1">订单查询</a><a href="#" class="ico2">CRM登录</a><a style="cursor:pointer;" onclick="AddFavorite('http://http://www.amiyx.com/','衡阳市大成锅炉有限公司')" class="ico3">加入收藏</a><a href="#" class="ico4">网站地图</a>
+        </span>
+    </div>
+    <div class="header_bottom cf">
+    	<a href="#" class="logo lf" title="衡阳市大成锅炉有限公司"><img src="images/logo.png"/></a>
+        <h1 class="lf">能效专家 大成系统  提供系统设计 锅炉及专用辅机 安装 运行管理整体解决方案</h1>
+        <span class="tele">400-000-000</span>
+    </div>
+</div>
+<!--头部-->
+<!--导航-->
+<div class="nav">
+	<ul class="muan cf">
+    	<li class="open"><a href="#">首页</a></li>
+        <li>
+        	<a href="#">锅炉系统</a>
+        	<div class="ico" style=" width:356px">
+            	<div class="nav1">
+                	<div class="nav1_left">
+                    	<img src="images/nav2.jpg"/>
+                        <h3><span>锅炉产品：</span></h3>
+                        <b class="cf">
+                        	<a href="#">生物质锅炉</a>
+                            <a href="#">生物质热水锅炉</a>
+                            <a href="#">生物质有机热载体锅炉</a>
+                            <a href="#">天然气蒸汽锅炉</a>
+                            <a href="#">型煤锅炉</a>
+                        </b>
+                    </div>
+                    
+                    <div class="nav1_left">
+                    	<img src="images/nav3.jpg"/>
+                        <h3><span>配套系统：</span></h3>
+                        <b class="cf">
+                        	<a href="#">提升机</a>
+                            <a href="#">省煤器</a>
+                            <a href="#">空气预热器</a>
+                            <a href="#">布袋除尘</a>
+                            <a href="#">电控柜</a>
+                            <a href="#">热力除氧器</a>
+                            <a href="#">水处理器</a>
+                            <a href="#">水泵</a>
+                        </b>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+        	<a href="#">解决方案</a>
+            <div class="ico">
+            	<div class="nav2">
+                	<div class="nav2_top"></div>
+                    <div class="nav2_com">
+                    	<a href="#">行业解决方案</a>
+                        <a href="#">系统解决方案</a>                        
+                    </div>
+                    <div class="nav2_bottom"></div>
+                </div>
+            </div>
+        </li>
+        <li>
+        	<a href="#">项目案例</a>
+        </li>
+        <li>
+        	<a href="#">特色服务</a>
+            <div class="ico">
+            	<div class="nav2">
+                	<div class="nav2_top"></div>
+                    <div class="nav2_com">
+                    	<a href="#">自助服务</a>
+                        <a href="#">订单查询</a>
+                        <a href="#">服务内容</a>
+                        <a href="#">服务流程</a>                        
+                    </div>
+                    <div class="nav2_bottom"></div>
+                </div>
+            </div> 
+        </li>
+        <li>
+        	<a href="#">合作方式</a>
+        </li>
+        <li>
+        	<a href="#">实力大成</a>  
+            <div class="ico">
+            	<div class="nav2">
+                	<div class="nav2_top"></div>
+                    <div class="nav2_com">
+                    	<a href="#">行业标准</a>
+                        <a href="#">技术文章</a>
+                        <a href="#">专利证书</a>
+                        <a href="#">荣誉资质</a>                        
+                    </div>
+                    <div class="nav2_bottom"></div>
+                </div>
+            </div>          
+        </li>
+        <li>
+        	<a href="#">走进大成</a>
+        	<div class="ico" style=" left:-22px;">
+            	<div class="nav2">
+                	<div class="nav2_top"></div>
+                    <div class="nav2_com">
+                    	<a href="#">公司简介</a>
+                        <a href="#">公司动态</a>
+                        <a href="#">行业动态</a>
+                        <a href="#">联系我们</a>
+                        <a href="#">加入大成</a>
+                    </div>
+                    <div class="nav2_bottom"></div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--导航-->
+<!--banner-->
+<div id="container">
+    <div id="example">
+        <div id="slides">
+            <div class="slides_container">
+                <div> <img src="images/index1.jpg" alt=""> </div>
+                <div> <img src="images/index2.jpg" alt=""> </div>
+                <div> <img src="images/index3.jpg" alt=""> </div>
+                <div> <img src="images/index4.jpg" alt=""> </div>
+                <div> <img src="images/index5.jpg" alt=""> </div>
+                <div> <img src="images/index6.jpg" alt=""> </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--banner-->
+<!--热门产品-->
+<div class="rmcp">
+	<span>热门产品：</span>
+    <a href="#">生物质蒸汽锅炉</a><a href="#">生物热水锅炉</a><a href="#">生物质有机热载体锅炉</a><a href="#">天然气锅炉</a><a href="#">型煤锅炉</a>
+    <img src="images/sj1.png" class="sj1"/>           
+</div>
+<!--热门产品-->
+<!--主推产品-->
+<div class="main1">
+	<div class="title cf">
+    	<h3>主推产品</h3><b>Main products</b>        
+        <div id="scrollWrap"> 
+            <ul id="scrollMsg"> 
+                <li><a href="#">可口可乐购买生物质蒸汽锅炉1</a></li>
+                <li><a href="#">可口可乐购买生物质蒸汽锅炉2</a></li>
+                <li><a href="#">可口可乐购买生物质蒸汽锅炉3</a></li>
+                <li><a href="#">可口可乐购买生物质蒸汽锅炉4</a></li>
+                <li><a href="#">可口可乐购买生物质蒸汽锅炉5</a></li>
+            </ul>
+        </div>        
+    </div>
+    
+    <div class="main1_com cf">
+    	<a href="#" class="wzth lf">更多产品</a>
+        <div class="main1_com_right">
+        	<!--切换-->
+        	<div class="main1_comtop">
+            	<div class="ma_comtop">
+                <div class="comtop yc1">
+                	<h3>生物质蒸汽锅炉</h3>
+                    <p>
+                    	<span>生产范围：2-20吨</span>
+                        <span>使用寿命：超过十五年</span>
+                        <span>特&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 性：1、锅炉出力大  2、蒸汽品质高 3、全智能<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;化控制，一键开停炉。</span>
+                        <a href="#">查看详情</a>                       
+                    </p>
+                     <img src="images/gl1.png"/>
+                </div>
+                
+                <div class="comtop yc2" style="display:none">
+                	<h3>生物质热水锅炉</h3>
+                    <p>
+                    	<span>生产范围：2-20吨</span>
+                        <span>使用寿命：超过十五年</span>
+                        <span>特&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 性：1、锅炉出力大  2、蒸汽品质高 3、全智能<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;化控制，一键开停炉。</span>
+                        <a href="#">查看详情</a>                        
+                    </p>
+                    <img src="images/xgl2.png"/>
+                </div>
+                
+                <div class="comtop yc3" style="display:none">
+                	<h3>生物质有机载体锅炉</h3>
+                    <p>
+                    	<span>生产范围：2-20吨</span>
+                        <span>使用寿命：超过十五年</span>
+                        <span>特&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 性：1、锅炉出力大  2、蒸汽品质高 3、全智能<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;化控制，一键开停炉。</span>
+                        <a href="#">查看详情</a>                        
+                    </p>
+                    <img src="images/xgl3.png"/>
+                </div>
+                </div>
+                <ul class="combott cf">
+                	<li  class="open dj1"><img src="images/xgl1.png"/><span><b>生物质蒸汽锅炉</b></span></li>
+                    <li class="dj2"><img src="images/xgl2.png" style="margin-top:-2px;"/><span><b>生物质热水锅炉</b></span></li>
+                    <li class="dj3"><img src="images/xgl3.png"/><span><b>生物质有机载体锅炉</b></span></li>
+                </ul>
+            </div>
+        </div>
+        <!--切换-->
+    </div>
+</div>
+<!--主推产品-->
+<!--项目案列-->
+<div class="case">
+	<div class="title cf">
+    	<h3 style="background:url(images/title1.png) no-repeat">项目案列</h3><b>Main products</b>             
+    </div>
+    <div class="qiehuan">
+    	<span class="qi1 open">全部</span>
+        <span class="qi2">食品行业</span>
+        <span class="qi3">医药行业</span>
+        <span class="qi4">饮料行业</span>
+        <span class="qi5">化工行业</span>
+        <span class="qi6">建材包装行业</span>
+        <span class="qi7">其他行业</span>
+    </div>
+    
+    
+    <div class="qeksnr">       
+        <!--代码开始-->
+        <div class="history ycs1">
+            <div class="history_box l_scrollBox_move fixed"> 
+                <span class="btn btn_left l_scrollBox_l">左翻</span> <span class="btn btn_right l_scrollBox_r">右翻</span>
+                <div class="xjys">
+                    <dl class="month_list">                
+                        <dd><a href="#">
+                        	<img src="images/qeksnr.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                        <dd><a href="#">
+                        	<img src="images/qeksnr1.jpg"/>
+                         	<span>紫光古汉股份有限公司</span>
+                         </a></dd>                         
+                         <dd><a href="#">
+                        	<img src="images/qeksnr3.jpg"/>
+                         	<span>可口可乐有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr4.jpg"/>
+                         	<span>河北鸿锐集团</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr2.jpg"/>
+                         	<span>河北唐山华通电缆有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr1.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr2.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>                         
+                    </dl>       
+                </div>
+            </div>     
+        </div>
+        <!--代码结束-->  
+        
+        <!--代码开始-->
+        <div class="history ycs2" style="display:none">
+            <div class="history_box l_scrollBox_move fixed"> 
+                <span class="btn btn_left l_scrollBox_l">左翻</span> <span class="btn btn_right l_scrollBox_r">右翻</span>
+                <div class="xjys">
+                    <dl class="month_list">                
+                        <dd><a href="#">
+                        	<img src="images/qeksnr2.jpg"/>
+                         	<span>徐记食品有限公司2</span>
+                         </a></dd>
+                        <dd><a href="#">
+                        	<img src="images/qeksnr3.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr4.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr1.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr2.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr3.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr2.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>                         
+                    </dl>       
+                </div>
+            </div>     
+        </div>
+        <!--代码结束-->
+        <!--代码开始-->
+        <div class="history ycs3" style="display:none">
+            <div class="history_box l_scrollBox_move fixed"> 
+                <span class="btn btn_left l_scrollBox_l">左翻</span> <span class="btn btn_right l_scrollBox_r">右翻</span>
+                <div class="xjys">
+                    <dl class="month_list">                
+                        <dd><a href="#">
+                        	<img src="images/qeksnr1.jpg"/>
+                         	<span>徐记食品有限公司3</span>
+                         </a></dd>
+                        <dd><a href="#">
+                        	<img src="images/qeksnr.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr1.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr2.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr3.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr4.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr2.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>                         
+                    </dl>       
+                </div>
+            </div>     
+        </div>
+        <!--代码结束-->   
+        <!--代码开始-->
+        <div class="history ycs4" style="display:none">
+            <div class="history_box l_scrollBox_move fixed"> 
+                <span class="btn btn_left l_scrollBox_l">左翻</span> <span class="btn btn_right l_scrollBox_r">右翻</span>
+                <div class="xjys">
+                    <dl class="month_list">                
+                        <dd><a href="#">
+                        	<img src="images/qeksnr3.jpg"/>
+                         	<span>徐记食品有限公司4</span>
+                         </a></dd>
+                        <dd><a href="#">
+                        	<img src="images/qeksnr.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr2.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr3.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr4.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr1.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr2.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>                         
+                    </dl>       
+                </div>
+            </div>     
+        </div>
+        <!--代码结束-->
+        <!--代码开始-->
+        <div class="history ycs5" style="display:none">
+            <div class="history_box l_scrollBox_move fixed"> 
+                <span class="btn btn_left l_scrollBox_l">左翻</span> <span class="btn btn_right l_scrollBox_r">右翻</span>
+                <div class="xjys">
+                    <dl class="month_list">                
+                        <dd><a href="#">
+                        	<img src="images/qeksnr4.jpg"/>
+                         	<span>徐记食品有限公司5</span>
+                         </a></dd>
+                        <dd><a href="#">
+                        	<img src="images/qeksnr1.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr3.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr4.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr4.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>                         
+                    </dl>       
+                </div>
+            </div>     
+        </div>
+        <!--代码结束-->     
+        <!--代码开始-->
+        <div class="history ycs6" style="display:none">
+            <div class="history_box l_scrollBox_move fixed"> 
+                <span class="btn btn_left l_scrollBox_l">左翻</span> <span class="btn btn_right l_scrollBox_r">右翻</span>
+                <div class="xjys">
+                    <dl class="month_list">                
+                        <dd><a href="#">
+                        	<img src="images/qeksnr.jpg"/>
+                         	<span>徐记食品有限公司6</span>
+                         </a></dd>
+                        <dd><a href="#">
+                        	<img src="images/qeksnr1.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr2.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr2.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr3.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr1.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>                         
+                    </dl>       
+                </div>
+            </div>     
+        </div>
+        <!--代码结束-->  
+        <!--代码开始-->
+        <div class="history ycs7" style="display:none">
+            <div class="history_box l_scrollBox_move fixed"> 
+                <span class="btn btn_left l_scrollBox_l">左翻</span> <span class="btn btn_right l_scrollBox_r">右翻</span>
+                <div class="xjys">
+                    <dl class="month_list">                
+                        <dd><a href="#">
+                        	<img src="images/qeksnr2.jpg"/>
+                         	<span>徐记食品有限公司7</span>
+                         </a></dd>
+                        <dd><a href="#">
+                        	<img src="images/qeksnr1.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr4.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr3.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr1.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>
+                         <dd><a href="#">
+                        	<img src="images/qeksnr2.jpg"/>
+                         	<span>徐记食品有限公司</span>
+                         </a></dd>                         
+                    </dl>       
+                </div>
+            </div>     
+        </div>
+        <!--代码结束-->  
+        <img src="images/sj2.png" class="sj2"/>
+    </div>
+    
+    
+</div>
+<!--项目案列-->
+<!--解决方案-->
+<div class="solution">
+	<div class="solution_two">
+    	<div class="title cf">
+    	<h3 style="background:url(images/title2.png) no-repeat">一站式解决方案</h3><b>Solutions</b>                  
+    </div>
+    <ul class="hdya cf">
+    	<li class="bj">
+        	<a href="#">
+        		<h3><img src="images/s1.png"/>咨 询</h3>
+                <p style=" background:url(images/t1.png) no-repeat 0 0;">
+                	一对一的客户项目沟通调研、评估、造价概算、风险评估以及售后跟踪咨询等等。
+                </p>
+            </a>
+        </li>
+        <li>
+        	<a href="#">
+        		<h3><img src="images/s2.png"/>设 计</h3>
+                <p style=" background:url(images/t2.png) no-repeat 0 0;">
+                	根据客户个性化的需求、专业定制，全程跟踪负责客户的方案设计、选型，以最优的设计回报客户。
+                </p>
+            </a>
+        </li>
+        <li class="bj">
+        	<a href="#">
+        		<h3><img src="images/s3.png"/>锅 炉</h3>
+                <p style=" background:url(images/t3.png) no-repeat 0 0;">
+                	以自主研发的全自动智能控制锅炉，热效率高达85%以上，帮助客户实现购买设备的价值最大化。
+                </p>
+            </a>
+        </li>
+        <li>
+        	<a href="#">
+        		<h3><img src="images/s4.png"/>专用辅机</h3>
+                <p style=" background:url(images/t4.png) no-repeat 0 0;">
+                	提供配套节能辅机，专业解决节能配件问题，让客户省钱、省力、省心。专业的辅机，解决客户后顾之优。
+                </p>
+            </a>
+        </li>
+        <li>
+        	<a href="#">
+        		<h3><img src="images/s5.png"/>安 装</h3>
+                <p style=" background:url(images/t5.png) no-repeat 0 0;">
+                	专业技术人员现场指导安装、调试，快捷方便的施工流程，施工周期短，比同行缩短80%。
+                </p>
+            </a>
+        </li>
+        <li class="bj">
+        	<a href="#">
+        		<h3><img src="images/s6.png"/>建制度</h3>
+                <p style=" background:url(images/t6.png) no-repeat 0 0;">
+                	建设管理流程，流程化制度建设，帮助客户解决效率问题，实现效率最高化，效益最大化。
+                </p>
+            </a>
+        </li>
+        <li>
+        	<a href="#">
+        		<h3><img src="images/s7.png"/>团队培养</h3>
+                <p style=" background:url(images/t7.png) no-repeat 0 0;">
+                	体系化、系统化团队培养，帮助客户解决团队问题，实现人力成本最低化、结构最优化。
+                </p>
+            </a>
+        </li>
+        <li class="bj">
+        	<a href="#">
+        		<h3><img src="images/s8.png"/>运营指导</h3>
+                <p style=" background:url(images/t8.png) no-repeat 0 0;">
+                	全程一对一负责用户和操作人员的培训，将增值服务融入到项目运营密切相关的任何一个环节。
+                </p>
+            </a>
+        </li>
+    </ul>
+    </div>
+    <img src="images/sj3.png" class="sj3"/>
+</div>
+<!--解决方案-->
+<!--企业简介-->
+<div class="brief cf">
+	<a href="#" class="lf"><img src="images/brief.jpg"/></a>
+    <div class="brief_right">
+    	<div class="title cf">
+    		<h3 style="color:#e67816; background:url(images/title3.png) no-repeat">企业简介</h3><b>Company profile</b> 
+         	<a href="#" class="moer">更多 +</a>
+    	</div>
+        <p><a href="#"><b>衡阳市大成锅炉有限公司</b>始建于1985年，是国家B级锅炉专业生产企业，产品性能稳定、品种齐全，畅销全国各地。</a></p>
+        <p><a href="#">
+      公司总部位于湖南省衡阳市区，距五大名山之一的南岳衡山仅三十分钟车程，毗邻京珠、衡昆高速，公路、高铁十分方便。公司生产设备和检测手段先进，通过了ISO9001:2008质量管理体系认证。拥有一支行业领先的技术创新团队，一支高素质技工型队伍以及遍布全国的售后服务体系</a></p>
+    </div>
+</div>
+<!--企业简介-->
+<!--新闻-->
+<div class="lism">
+    <ul class="journalism cf">
+        <li>
+            <h3 class="cf"><img src="images/ism.png"/><span>公司新闻</span> <a href="#">更多 +</a></h3>
+            <a href="#" class="co cf">
+                <b><i>03</i>2016-02</b>
+                <span>大成锅炉荣获“中国生物质能行业创新力企业”及“十大创新人物”双项殊荣</span>
+            </a>
+            <a href="#" class="co cf">
+                <b><i>03</i>2016-02</b>
+                <span>大成锅炉荣获“中国生物质能行业创新力企业”及“十大创新人物”双项殊荣</span>
+            </a>
+            <a href="#" class="co cf">
+                <b><i>03</i>2016-02</b>
+                <span>大成锅炉荣获“中国生物质能行业创新力企业”及“十大创新人物”双项殊荣</span>
+            </a>
+            <a href="#" class="co cf">
+                <b><i>03</i>2016-02</b>
+                <span>大成锅炉荣获“中国生物质能行业创新力企业”及“十大创新人物”双项殊荣</span>
+            </a>       
+        </li>
+        <li>
+            <h3 class="cf"><img src="images/ism1.png"/><span>行业新闻</span> <a href="#">更多 +</a></h3>
+            <a href="#" class="co cf">
+                <b><i>26</i>2016-02</b>
+                <span>生物质锅炉领导企业，打造中国生物质能源航母。</span>
+            </a>
+            <a href="#" class="co cf">
+                <b><i>26</i>2016-02</b>
+                <span>生物质锅炉领导企业，打造中国生物质能源航母。</span>
+            </a>
+            <a href="#" class="co cf">
+                <b><i>26</i>2016-02</b>
+                <span>生物质锅炉领导企业，打造中国生物质能源航母。</span>
+            </a>
+            <a href="#" class="co cf">
+                <b><i>26</i>2016-02</b>
+                <span>生物质锅炉领导企业，打造中国生物质能源航母。</span>
+            </a>       
+        </li>
+        <li>
+            <h3 class="cf"><img src="images/ism2.png"/><span>技术文章</span> <a href="#">更多 +</a></h3>
+            <a href="#" class="co cf">
+                <b><i>30</i>2016-02</b>
+                <span>大成锅炉荣获“中国生物质能行业创新力企业”及“十大创新人物”双项殊荣</span>
+            </a>
+            <a href="#" class="co cf">
+                <b><i>30</i>2016-02</b>
+                <span>大成锅炉荣获“中国生物质能行业创新力企业”及“十大创新人物”双项殊荣</span>
+            </a>
+            <a href="#" class="co cf">
+                <b><i>30</i>2016-02</b>
+                <span>大成锅炉荣获“中国生物质能行业创新力企业”及“十大创新人物”双项殊荣</span>
+            </a>
+            <a href="#" class="co cf">
+                <b><i>30</i>2016-02</b>
+                <span>大成锅炉荣获“中国生物质能行业创新力企业”及“十大创新人物”双项殊荣</span>
+            </a>       
+        </li>
+    </ul>
+    <div class="hsxt" style="left:340px;"></div><div class="hsxt" style="left:673px;"></div><img src="images/sj4.png" class="sj4"/>
+</div>
+<!--新闻-->
+<!--底部导航-->
+<div class="foo_nav">
+	<a href="#">首页</a>
+    <a href="#">锅炉及配套系统</a>
+    <a href="#">解决方案</a>
+    <a href="#">合作方式</a>
+    <a href="#">项目案例</a>
+    <a href="#">特色服务</a>
+    <a href="#">实力大成</a>
+    <a href="#">走进大成</a>                                                                   
+</div>
+<!--底部导航-->
+<div class="footer" style="margin-top:-43px;">
+	<div class="footer_two cf">
+    	<div class="footer_left">
+        	<img src="images/wx.png"/>
+            <span>大成锅炉微信公众号</span>
+        </div>
+        <div class="footer_zo">
+        	<h3>衡阳市大成锅炉有限公司</h3>            
+            <span>电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话：+86 0734 8430660</span>
+            <span>移动电话： 18973479726</span>
+            <span>传&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;真：+86 0734 8430660</span>
+            <span>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编：421001</span>
+            <span>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：中国 湖南 衡阳市蒸湘区 南三角线79号</span>
+            <span>技术支持：拾牛网络</span>
+        </div>
+        <div class="footer_right">
+        	<h3>友情链接：</h3>            
+            <a href="#">CRM登陆</a>
+            <a href="#">生物质锅炉</a> <br/>
+            <a href="#">生物质蒸汽锅炉</a>
+            <a href="#">生物质有机热载体锅炉</a><br/>
+            <a href="#">天然气锅炉</a>
+            <a href="#">燃煤锅炉</a><br/>
+            <a href="#">循环流化床锅炉</a>
+         </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+try{ 
+	var isStoped = false; 
+	var oScroll = document.getElementById("scrollWrap"); 
+	with(oScroll){ 
+		noWrap = true; 
+	} 
+
+	oScroll.onmouseover = new Function('isStoped = true'); 
+	oScroll.onmouseout = new Function('isStoped = false'); 
+
+	var preTop = 0; 
+	var curTop = 0; 
+	var stopTime = 0; 
+	var oScrollMsg = document.getElementById("scrollMsg");
+
+	oScroll.appendChild(oScrollMsg.cloneNode(true)); 
+	init_srolltext();
+	
+}catch(e){} 
+
+function init_srolltext(){ 
+	oScroll.scrollTop = 0; 
+	setInterval('scrollUp()', 15); 
+}
+
+function scrollUp(){ 
+	if(isStoped)
+	return; 
+	curTop += 1; 
+	if(curTop == 23){ 
+		stopTime += 1; 
+		curTop -= 1; 
+		if(stopTime == 180){ 
+			curTop = 0; 
+			stopTime = 0; 
+		} 
+	}else{ 
+		preTop = oScroll.scrollTop; 
+		oScroll.scrollTop += 1; 
+		if(preTop == oScroll.scrollTop){ 
+			oScroll.scrollTop = 0; 
+			oScroll.scrollTop += 1; 
+		} 
+	} 
+}
+</script>

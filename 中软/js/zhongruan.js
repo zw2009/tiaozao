@@ -16,15 +16,15 @@ $(document).on("click", ".listPro span", function() {
 })
 
 //点击移动有阴影
-//$(document).on("mouseenter ",".centeRig li",function(){
-//	$(".centeRig li").stop().animate({"bottom": '0px'}).css({'box-shadow':"none"});
-//	 $(this).stop().animate({"bottom": '+10px'}).css({'box-shadow':"1px 8px 10px #e7e7e7"});
-//})
-//
-//$(document).on("mouseenter ",".teachLis li",function(){
-//	$(".teachLis li").stop().animate({"bottom": '0px'}).css({'box-shadow':"none"});
-//	 $(this).stop().animate({"bottom": '+10px'}).css({'box-shadow':"1px 8px 10px #e7e7e7"});
-//})
+$(document).on("mouseenter ",".centeRig li",function(){
+	$(".centeRig li").stop().animate({"bottom": '0px'}).css({'box-shadow':"none"});
+	 $(this).stop().animate({"bottom": '+10px'}).css({'box-shadow':"1px 8px 10px #e7e7e7"});
+})
+
+$(document).on("mouseenter ",".teachLis li",function(){
+	$(".teachLis li").stop().animate({"bottom": '0px'}).css({'box-shadow':"none"});
+	 $(this).stop().animate({"bottom": '+10px'}).css({'box-shadow':"1px 8px 10px #e7e7e7"});
+})
 
 //banner切换
 var id = 0;
